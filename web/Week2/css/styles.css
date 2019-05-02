@@ -1,0 +1,60 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   font-size: 62.5%
+}
+
+body {
+   
+   box-sizing: border-box;
+}
+
+p {
+   text-align: center;
+}
+
+#box1 {
+   background-color: red;
+   font-size: 4rem;
+}
+
+#box2 {
+   background-color: yellow;
+   font-size: 4rem;
+}
+
+#box3 {
+   background-color: green;
+   font-size: 4rem;
+}
+
+label {
+   font-size: 2rem;
+}
+
+#box2_color, #box1_color {
+   font-size: 2rem;
+}
+
+.hover:hover {
+   font-weight: bold;
+}
+
+.return-link {
+   font-size: 2em;
+}
+
+.row {
+   margin: 2em;
+   padding-left: 2em;
+   padding-right: 2em;
+}
+
+.largeButton {
+   text-align: center;
+   padding: 2em;
+}

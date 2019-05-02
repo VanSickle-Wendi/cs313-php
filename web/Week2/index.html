@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CS313 Week 2 Activity</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="javascript/javascript.js"></script>
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+   </head>
+   <body>
+      <div class="row">
+         <div class="col-sm-5 hover" id="box1">
+            <p>Javascript Color Change</p>
+            <label for="box1_color">Color:</label>
+            <input type="text" id="box1_color" value="red" placeholder="#ff000">
+            <button type="button" class="btn btn-dark" id="box1_button" onclick="changeColor();">Change Color</button>
+         </div>
+         <div class="col-sm-2 largeButton">
+            
+            <button id="button" onclick="clicked()" type="button" class="btn btn-primary btn-lg">Click Me</button><br><br><br>      
+
+            <button id="box3_button" type="button" class="btn btn-primary btn-lg">Fade In and Out</button>                   
+
+         </div>   
+         <div class="col-sm-5 hover" id="box2">       
+            <p>JQuery Color Change</p>
+            <label for="box2_color">Color:</label>
+            <input type="text" id="box2_color" value="yellow" placeholder="#ff000">
+            <button type="button" class="btn btn-dark" id="box2_button">Change Color</button>          
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-4"></div>
+         <div class="col-sm-4 col hover" id="box3">
+            <div class="col-sm-4"></div>
+            <p>JQuery Fade In and Out</p>           
+         </div>
+      </div>
+
+   </body>
+</html>
+
