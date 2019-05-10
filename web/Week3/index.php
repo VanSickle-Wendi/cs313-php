@@ -1,12 +1,66 @@
-<html lang="en-us">
+<!DOCTYPE html>
+
+<!-- Alternate Code -->
+<?php
+include_once 'php/_data.php';
+?>
+<html>
+   <head>
+      <style>
+         label {
+            display: block;
+         }
+         li {
+            list-style: none;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Hitting submit sends data (from the input 'name' variables) to post.php form and runs 
+      through filter_input function-->
+      
+      <form method="post" action="php/post.php">
+         <label for="name">Name:&nbsp<input type="text" name="name" id="name" /></label><br>
+         <label>Email:&nbsp<input type="email" name="email" /></label><br>
+         <label for="maj">Major:&nbsp</label>
+         <?php foreach ($majors as $abbr => $major) : ?>
+            <input id="maj" type="radio" name="major" value="<?= $abbr; ?>"/>
+            <?= $major; ?><br>
+         <?php endforeach; ?><br>
+         <label for="com">Comments:&nbsp</label>
+         <textarea id="com" name="comments" cols="30" rows="5"></textarea><br><br>        
+         Visited Continents:
+         <ul>
+            <li>
+               <?php foreach ($continents as $abbr => $name) : ?>
+                  <label>
+                     <input type="checkbox" name="visited[]" value="<?= $abbr; ?>"/>
+                     <?= $name; ?>
+                  </label>
+               <?php endforeach; ?>
+            </li>
+         </ul>
+         <div>
+            <input type="submit" name="action" value="Submit"
+         </div><br><br>
+      </form>
+
+<!--       <p><a href="../assignments/teamAssignments.php" title="Visit Team Assignments page">Return to Team Assignments</a></p>-->
+
+   <!--</body>-->
+
+<!--</html>-->
+
+<!--- My Code -->
+<!--<html lang="en-us">
    <head>
       <meta charset="UTF-8">
       <meta name ="author" content="Wendi Van Sickle">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Week 3 Form</title>
    </head>
-   <body>
-
+   <body>-->
+<!-- Hitting submit sends data to php.php form and runs through input_test function-->
       <form action="php/php.php" method="post">
          <label for="name">Name: &nbsp</label>
          <input type="text" name="name">
