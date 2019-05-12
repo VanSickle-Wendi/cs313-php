@@ -13,7 +13,7 @@
          <header class="header">
           <div class="header__text-box">
           <h1 class="heading--assignments">
-             <span class="heading-main">Assignments Coming</span>
+             <span class="heading-main">Assignments</span>
           </h1>            
              <a href="../index.php" class="button button--color button--animated">Home</a>
           </div>
@@ -21,12 +21,13 @@
          <nav>
             <div class='nav'>
                <p><a href="teamAssignments.php" title="Visit Team Assignments page">Team</a></p>
-               <p><a href="#" title="Visit Assignments page">Assignments</a></p>
+               <p><a href="ShoppingCart/browse.php" title="Visit Assignments page">Shopping Cart</a></p>
             </div> 
          </nav>
          <main>
             <div class="main--information">
-               <h2></h2>
+               <h2>Shopping Cart</h2>
+               <a href="ShoppingCart/browse.php"/>
             </div>
             
             <div class="main--information">
