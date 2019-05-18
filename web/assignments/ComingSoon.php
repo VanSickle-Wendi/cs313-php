@@ -26,8 +26,7 @@
          </nav>
          <main>
             <div class="main--information">
-               <h2>Shopping Cart</h2>
-               <a href="ShoppingCart/browse.php"/>
+             
             </div>
             
             <div class="main--information">
