@@ -37,15 +37,15 @@
             <?php
             foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
             {
-            echo '<p><span id="bold">' . $row['book'] . ' ';
+            echo "<p><span>" . $row['book'] . ' ';
             echo $row['chapter'];
-            echo ':' . $row['verse'] . ' - ' . '</span>';
-            echo '"' . $row['content'] . '"</p>';            
+            echo ':' . $row['verse'] . ' - ' . "</span>";
+            echo '"' . $row['content'] . '"' . "</p>";            
             echo '<br/>';
             }            
             ?>
             
-            <p><span id="bold">John 1:5 - "And the light shineth in darkness; and the darkness comprehended it not."</span><p>
+            <p><span>John 1:5 - "And the light shineth in darkness; and the darkness comprehended it not."</span></p>
          </main>
          <footer>
          </footer>
