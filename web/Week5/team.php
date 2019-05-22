@@ -11,9 +11,11 @@
    <body>
       <div>
          <header>
+            <h1>Scripture Resources</h1>
          </header>
          <main>
-            <h1>Scripture Resources</h1>
+
+
             <?php
             try {
                $dbUrl = getenv('DATABASE_URL');
@@ -34,22 +36,19 @@
                die();
             }
             ?>
+
             <?php
-            foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
-            {
-            echo "<p><span>" . $row['book'] . ' ';
-            echo $row['chapter'];
-            echo ':' . $row['verse'] . ' - ' . "</span>";
-            echo '"' . $row['content'] . '"' . "</p>";            
-            echo '<br/>';
-            }            
+            foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row) {
+               echo "<p><span>" . $row['book'] . ' ';
+               echo $row['chapter'];
+               echo ':' . $row['verse'] . ' - ' . "</span>";
+               echo '"' . $row['content'] . '"' . "</p>";
+               echo '<br/>';
+            }
             ?>
-            
-            
-            <p><span>John 1:5 - "And the light shineth in darkness; and the darkness comprehended it not."</span></p>
-         </main>
-         <footer>
-         </footer>
+
+            <footer>
+            </footer>
       </div>   
    </body>
 </html>
