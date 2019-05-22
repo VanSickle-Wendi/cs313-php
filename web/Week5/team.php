@@ -37,8 +37,11 @@
             <?php
             foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
             {
-            echo "<span>" . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . ' - ' . "</span>" . '"' . $row['content'] . '"' . '<br/>';
-
+            echo '<p><span>' . $row['book'] . ' ';
+            echo $row['chapter'];
+            echo ':' . $row['verse'] . ' - </span>';
+            echo '"' . $row['content'] . '"</p>';            
+            echo '<br/>';
             }            
             ?>
             
