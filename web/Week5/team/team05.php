@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Week05 Team Activity</title>
-        <link rel="stylesheet" type="text/css" href="team05.css">
+        <link rel="stylesheet" type="text/css" href="css/team05.css">
     </head>
     <body>
     <h1>Scripture Resources</h1>
