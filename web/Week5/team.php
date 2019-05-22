@@ -14,6 +14,7 @@
          <header>
          </header>
          <main>
+            <h1>Scripture Resources</h1>
             <?php
             try {
                $dbUrl = getenv('DATABASE_URL');
@@ -35,10 +36,12 @@
             }
             ?>
             <?php
-            foreach ($db->query('SELECT username, password FROM note_user') as $row)
+            foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
             {
-            echo 'user: ' . $row['username'];
-            echo ' password: ' . $row['password'];
+            echo $row['book'];
+            echo $row['chapter'];
+            echo ':' . $row['verse'];
+            echo '- "' . $row['content'] . '"';            
             echo '<br/>';
             }            
             ?>
