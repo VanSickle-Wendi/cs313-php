@@ -39,7 +39,6 @@
       echo '<br/>';
     }
     ?>
-
     <form method="post" action="stretch05.php">
         <input type="text" name="book" placeholder="book">
         <input type="submit" value="search">
