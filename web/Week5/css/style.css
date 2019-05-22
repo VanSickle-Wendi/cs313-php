@@ -4,6 +4,10 @@
    box-sizing: inherit;
 }
 
+heading {
+   margin-bottom: 1em;
+}
+
 span {
    font-weight: bold;
 }
