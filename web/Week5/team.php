@@ -47,32 +47,6 @@
             }
             ?>
 
-            <form method="post" action="php/post.php">
-               <label for="name">Name:&nbsp<input type="text" name="name" id="name" /></label><br>
-               <label>Email:&nbsp<input type="email" name="email" /></label><br>
-               <label for="maj">Major:&nbsp</label>
-               <?php foreach ($majors as $abbr => $major) : ?>
-                  <input id="maj" type="radio" name="major" value="<?= $abbr; ?>"/>
-                  <?= $major; ?><br>
-               <?php endforeach; ?><br>
-               <label for="com">Comments:&nbsp</label>
-               <textarea id="com" name="comments" cols="30" rows="5"></textarea><br><br>        
-               Visited Continents:
-               <ul>
-                  <li>
-                     <?php foreach ($continents as $abbr => $name) : ?>
-                        <label>
-                           <input type="checkbox" name="visited[]" value="<?= $abbr; ?>"/>
-                           <?= $name; ?>
-                        </label>
-                     <?php endforeach; ?>
-                  </li>
-               </ul>
-               <div>
-                  <input type="submit" name="action" value="Submit"
-               </div><br><br>
-            </form>
-
             <ul>
                <form name="display" action="team.php" method="POST" >
                   <li>Book Name:</li><li><input type="text" name="bookName" /></li>
