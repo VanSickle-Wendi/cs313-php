@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta name ="author" content="Wendi Van Sickle">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/> 
+      <link href="style.css" type="text/css" rel="stylesheet" media="screen"/> 
       <title>Week 5 Team Assignment</title>
    </head>
    <body>
@@ -46,13 +46,14 @@
                echo '<br/>';
             }
             ?>
-
+          
             <ul>
                <form name="display" action="team.php" method="POST" >
                   <li>Book Name:</li><li><input type="text" name="bookName" /></li>
                   <li><input type="submit" name="submit" /></li>
                </form>
-            </ul>            
+            </ul>  
+           
 
             <footer>
             </footer>
