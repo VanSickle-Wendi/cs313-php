@@ -13,7 +13,7 @@
          <header>
          </header>
          <main>
-            <h1>Scripture Resources AHHHHHHHHH</h1>
+            <h1>Scripture Resources</h1>
             <?php
             try {
                $dbUrl = getenv('DATABASE_URL');
