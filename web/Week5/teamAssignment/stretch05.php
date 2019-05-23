@@ -37,6 +37,7 @@
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $r) {
         echo '<p><a href="display.php?scripture=' . $r['id'] . '">';
+        echo $r['book'] . ' ';
         echo $r['chapter'];
         echo ':' . $r['verse'];
         echo '</a></p>';

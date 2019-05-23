@@ -5,7 +5,9 @@
         <link rel="stylesheet" type="text/css" href="team05.css">
     </head>
     <body>
+       <header>
     <h1>Scripture Resources</h1>
+       </header>
     <?php
         try
             {
