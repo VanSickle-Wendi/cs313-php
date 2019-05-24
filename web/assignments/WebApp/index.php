@@ -5,7 +5,7 @@ $db = get_db();
 ?>
 <?php
 //Get Songs
-$statement = $db->prepare("SELECT title, tempo, genre FROM song ORDER BY title");
+$statement = $db->prepare("SELECT title, tempo, genre FROM song");
 $statement->execute();
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,15 @@ $statement->execute();
             </nav>
             <h3 class="text-muted">Repertoire</h3>
          </div>
+                  <?php
+                  while ($row = $statement->fetch(PDO_ASSOC)) {
+                     $title = $row['title'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
 
+                     echo "<p>$title $tempo $genre<p>";
+                  }
+                  ?>
 
 
          <div class="row">
@@ -50,15 +58,7 @@ $statement->execute();
                   </tr>
                </thead>
                <tbody>
-                  <?php
-                  while ($row = $statement->fetch(PDO_ASSOC)) {
-                     $title = $row['title'];
-                     $tempo = $row['tempo'];
-                     $genre = $row['genre'];
 
-                     echo "<tr><td>$title</td></tr>";
-                  }
-                  ?>
                </tbody>
             </table>
          </div>
