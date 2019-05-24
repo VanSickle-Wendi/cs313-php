@@ -3,11 +3,7 @@ require "database.php";
 $db = get_db();
 //include('database.php');
 ?>
-<?php
-//Get Songs
-$statement = $db->prepare("SELECT title, tempo, genre FROM song");
-$statement->execute();
-?>
+
 <!DOCTYPE html>
 <html lang="en-us">
    <head>
@@ -36,15 +32,21 @@ $statement->execute();
             </nav>
             <h3 class="text-muted">Repertoire</h3>
          </div>
-                  <?php
-                  while ($row = $statement->fetch(PDO_ASSOC)) {
-                     $title = $row['title'];
-                     $tempo = $row['tempo'];
-                     $genre = $row['genre'];
+         <?php
+           //Get Songs
+         $statement = $db->prepare("SELECT title, tempo, genre FROM song");
+         $statement->execute();
+         ?> 
+         
+         <?php
+         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            $title = $row['title'];
+            $tempo = $row['tempo'];
+            $genre = $row['genre'];
 
-                     echo "<p>$title $tempo $genre<p>";
-                  }
-                  ?>
+            echo "<p>$title $tempo $genre<p>";
+         }
+         ?>
 
 
          <div class="row">
