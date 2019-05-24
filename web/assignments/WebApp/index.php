@@ -1,5 +1,5 @@
 <?php
-require 'database.php';
+require "database.php";
 $db = get_db();
 //include('database.php');
 ?>
