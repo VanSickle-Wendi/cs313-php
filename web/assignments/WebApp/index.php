@@ -1,12 +1,12 @@
-<?php 
+<?php
 require 'database.php';
 $db = get_db();
 //include('database.php');
 ?>
 <?php
-    //Get Songs
-    $statement = $db->prepare("SELECT title, tempo, genre FROM song ORDER BY title");
-    $statement->execute();
+//Get Songs
+$statement = $db->prepare("SELECT title, tempo, genre FROM song ORDER BY title");
+$statement->execute();
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -42,21 +42,23 @@ $db = get_db();
          <div class="row">
             <table class="table table-striped">
                <thead>
-               <tr>
-                  <th>Title</th>
-                  <th>Tempo</th>
-                  <th>Genre</th>
-                  <th>Background</th>
-               </tr>
+                  <tr>
+                     <th>Title</th>
+                     <th>Tempo</th>
+                     <th>Genre</th>
+                     <th>Background</th>
+                  </tr>
                </thead>
                <tbody>
-                  <?php while($row = $statement->fetch(PDO_ASSOC)) { 
-                     echo 
-                              
-                  "<tr>" . 
-                     "<td>" . $row['title'] . "</td>" .
-                  "</tr>";
-                  } ?>
+                  <?php
+                  while ($row = $statement->fetch(PDO_ASSOC)) {
+                     $title = $row['title'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
+
+                     echo "<tr><td>$title</td></tr>";
+                  }
+                  ?>
                </tbody>
             </table>
          </div>
