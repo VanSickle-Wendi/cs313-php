@@ -45,14 +45,14 @@ $db = get_db();
                <tbody>
                   <?php
                   //Get Songs
-                  $statement = $db->prepare("SELECT title, tempo, genre FROM song");
+                  $statement = $db->prepare("SELECT title, tempo, genre, background FROM song");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
                      $tempo = $row['tempo'];
                      $genre = $row['genre'];
 
-                     echo "<tr><td>$title $tempo $genre</tr><td>";
+                     echo "<tr><td>$title $tempo $genre</td></tr>";
                   }
                   ?>
                </tbody>
