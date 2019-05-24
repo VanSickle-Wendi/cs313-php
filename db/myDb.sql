@@ -91,7 +91,7 @@ INSERT INTO song(title, tempo, genre, background, lead_singer)
             ('No One Needs to Know', 'medium', 'country', 'karaoke', 3),
             ('Past the Point of Rescue', 'medium', 'country', 'karaoke', 2),
             ('Pontoon', 'medium', 'country', 'karaoke', 2),
-            ('Singing the Blues Sweetheart', 'medium', 'old country', 'karaoke', 3),
+            ('Singing the Blues', 'medium', 'old country', 'karaoke', 3),
             ('Till I Kissed You', 'medium', '50s', 'karaoke', 2),
             ('Turn It Loose', 'medium', 'country', 'karaoke', 2),
             ('Walk Right Back', 'medium', 'country', 'karaoke', 4),
