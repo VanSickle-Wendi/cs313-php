@@ -51,8 +51,9 @@ $db = get_db();
                      $title = $row['title'];
                      $tempo = $row['tempo'];
                      $genre = $row['genre'];
+                     $background = $row['background'];
 
-                     echo "<tr><td>$title $tempo $genre</td></tr>";
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   ?>
                </tbody>
