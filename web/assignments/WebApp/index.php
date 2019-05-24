@@ -3,6 +3,11 @@
 //$db=get_db();
 include('database.php');
 ?>
+<?php
+    //Get Songs
+    $songs = "SELECT title FROM song";
+    $results = pg_query($songs) or die("Query Failed" . pg_last_error());
+?>
 <!DOCTYPE html>
 <html lang="en-us">
    <head>
@@ -45,9 +50,11 @@ include('database.php');
                </tr>
                </thead>
                <tbody>
+                  <?php while($row = pg_fetch_array($results,null,PGSQL_ASSOC)) : ?>                
                   <tr>
-                     <td></td>
+                     <td><?php echo $row['title']; ?></td>
                   </tr>
+                  <?php endwhile; ?>
                </tbody>
             </table>
          </div>
