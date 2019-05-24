@@ -1,6 +1,6 @@
       <?php
-      function get_db() {
-         $db = NULL;
+//      function get_db() {
+//         $db = NULL;
       //Connecting to a database at Heroku
       try {
          //Heroku automatically creates an enviroment variable DATABASE_URL
@@ -21,9 +21,9 @@
          $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       } catch (PDOException $ex) {
          echo 'Error!: ' . $ex->getMessage();
-         die();
+         die('Could not connect' . pg_last_error());
       }
-      return $db;
-      }
+//      return $db;
+//      }
       ?>
 
