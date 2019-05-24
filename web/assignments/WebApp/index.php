@@ -55,8 +55,8 @@ $db = get_db();
                               
                   "<tr>" . 
                      "<td>" . $row['title'] . "</td>" .
-                  "</tr>"
-                  ?>
+                  "</tr>";
+                  } ?>
                </tbody>
             </table>
          </div>
