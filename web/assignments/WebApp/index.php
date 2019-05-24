@@ -1,12 +1,12 @@
 <?php 
-//require 'database.php';
-//$db=get_db();
-include('database.php');
+require 'database.php';
+$db = get_db();
+//include('database.php');
 ?>
 <?php
     //Get Songs
-    $songs = "SELECT * FROM song;";
-    $results = pg_query($songs) or die("Query Failed" . pg_last_error());
+    $statement = $db->prepare("SELECT title, tempo, genre FROM song ORDER BY title");
+    $statement->execute();
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -50,11 +50,13 @@ include('database.php');
                </tr>
                </thead>
                <tbody>
-                  <?php while($row = pg_fetch_array($results,null,PGSQL_ASSOC)) : ?>                
-                  <tr>
-                     <td><?php echo $row['title']; ?></td>
-                  </tr>
-                  <?php endwhile; ?>
+                  <?php while($row = $statement->fetch(PDO_ASSOC)) { 
+                     echo 
+                              
+                  "<tr>" . 
+                     "<td>" . $row['title'] . "</td>" .
+                  "</tr>"
+                  ?>
                </tbody>
             </table>
          </div>
