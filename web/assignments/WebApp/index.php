@@ -33,7 +33,7 @@ $db = get_db();
             <h3 class="text-muted">Repertoire</h3>
          </div>
          <div class="row">
-            <table class="table table-striped">
+            <table class="table table-striped table-condensed">
                <thead>
                   <tr>
                      <th>Title</th>
