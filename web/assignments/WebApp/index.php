@@ -5,7 +5,7 @@ include('database.php');
 ?>
 <?php
     //Get Songs
-    $songs = "SELECT title FROM song";
+    $songs = "SELECT title FROM song;";
     $results = pg_query($songs) or die("Query Failed" . pg_last_error());
 ?>
 <!DOCTYPE html>
