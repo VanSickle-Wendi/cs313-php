@@ -36,9 +36,6 @@ $db = get_db();
            //Get Songs
          $statement = $db->prepare("SELECT title, tempo, genre FROM song");
          $statement->execute();
-         ?> 
-         
-         <?php
          while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             $title = $row['title'];
             $tempo = $row['tempo'];
