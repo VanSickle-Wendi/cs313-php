@@ -32,20 +32,6 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">Repertoire</h3>
          </div>
-         <?php
-           //Get Songs
-         $statement = $db->prepare("SELECT title, tempo, genre FROM song");
-         $statement->execute();
-         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            $title = $row['title'];
-            $tempo = $row['tempo'];
-            $genre = $row['genre'];
-
-            echo "<p>$title $tempo $genre<p>";
-         }
-         ?>
-
-
          <div class="row">
             <table class="table table-striped">
                <thead>
@@ -57,7 +43,18 @@ $db = get_db();
                   </tr>
                </thead>
                <tbody>
+                  <?php
+                  //Get Songs
+                  $statement = $db->prepare("SELECT title, tempo, genre FROM song");
+                  $statement->execute();
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $title = $row['title'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
 
+                     echo "<tr><td>$title $tempo $genre</tr><td>";
+                  }
+                  ?>
                </tbody>
             </table>
          </div>
