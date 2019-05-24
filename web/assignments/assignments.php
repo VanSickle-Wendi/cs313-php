@@ -6,7 +6,7 @@
       <meta name ="author" content="Wendi Van Sickle">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen"/>      
-      <title>Coming Soon</title>
+      <title>Assignments</title>
    </head>
    <body>
       <div>
@@ -20,8 +20,8 @@
          </header>
          <nav>
             <div class='nav'>
-               <p><a href="teamAssignments.php" title="Visit Team Assignments page">Team</a></p>
-               <p><a href="ShoppingCart/browse.php" title="Visit Assignments page">Shopping Cart</a></p>
+               <p><a href="ShoppingCart/browse.php" title="Shopping Cart Assignment">Shopping Cart</a></p>
+               <p><a href="WebApp/index.php" title="Web App Assignment">Web App</a></p>               
             </div> 
          </nav>
          <main>

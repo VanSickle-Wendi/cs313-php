@@ -14,12 +14,12 @@
          <header class="header">
             <?php include ('common/header.php'); ?>
          </header>
-         <nav>
+<!--         <nav>
             <div class='nav'>
                <p><a href="index.php" title="Visit home page">Home</a></p>
-               <p><a href="assignments/ComingSoon.php" title="Visit Assignments page">Assignments</a></p>
+               <p><a href="assignments/assignments.php" title="Visit Assignments page">Assignments</a></p>
             </div> 
-         </nav>
+         </nav>-->
          <main>
             <div class="main--information">
                <h2>Hobbies</h2>

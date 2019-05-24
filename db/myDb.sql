@@ -14,8 +14,8 @@ CREATE TABLE song (
    id SERIAL PRIMARY KEY,
    title VARCHAR(50) NOT NULL UNIQUE,
    tempo TEMPO_TYPE NOT NULL,
-   genre GENRE_TYPE NOT NULL,
-   background BACKGROUND_TYPE NOT NULL,
+   genre GENRE_TYPE,
+   background BACKGROUND_TYPE,
    first_chord VARCHAR(20),
    song_key VARCHAR(5),
    lead_singer INT REFERENCES singer(id)
