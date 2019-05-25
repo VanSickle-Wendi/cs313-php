@@ -37,7 +37,6 @@
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
-                     <th>Venue</th>
                      <th>Date</th>
                      <th>Time</th>
                      <th>Booked</th>
