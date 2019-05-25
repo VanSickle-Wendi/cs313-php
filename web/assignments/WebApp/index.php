@@ -57,7 +57,7 @@ $db = get_db();
                      echo "<tr>";
                      echo "<td>$title</td>";
                      echo "<td>";
-                     echo "<a href='songDetails.php?id=<?php echo $row[id]; ?>' class='btn btn-default btn-xs'>Details</a>";
+                     echo "<a href='views/songDetails.php?id=<?php echo $row[id]; ?>' class='btn btn-default btn-xs'>Details</a>";
                      echo "</td>";
                      echo "</tr>";
 //                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
