@@ -1,5 +1,5 @@
 <?php 
-require "db/database.php";
+include('db/database.php');
 ?>
 <?php
    $query = "SELECT id, tempo FROM song";
@@ -43,8 +43,9 @@ require "db/database.php";
                   <label for="tempo">Tempo</label>
                   <select name="tempo" class="form-control" id="tempo">
                      <option value="0">Select Tempo</option>
-                     <?php while ($row = pg_fetch_array($tempo, null, PGSQL_ASSOC))  ?>
+                     <?php while ($row = pg_fetch_array($tempo, null, PGSQL_ASSOC)) : ?>
                      <option value="<?php echo $row['id']; ?><?php echo $row['tempo']; ?></option>
+                     <?php endwhile; ?>        
                   </select>
                </div>
                <div class="form-group">
