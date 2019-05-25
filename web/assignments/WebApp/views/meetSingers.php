@@ -31,7 +31,7 @@ $db = get_db();
                </ul>
             </nav>
             <h3 class="text-muted">The Singers</h3>
-            <form method="post" action="index2.php">
+            <form method="post" action="meetSingers.php">
                <input type="text" name="songs">
                <input type="submit" value="search">
             </form> 
