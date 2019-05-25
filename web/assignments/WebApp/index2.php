@@ -18,7 +18,7 @@ $db = get_db();
       <title>Repertoire</title>
    </head>
    <body>
-      <form method="post" action="idex2.php">
+      <form method="post" action="index2.php">
          <input type="text" name="songs">
          <input type="submit" value="search">
       </form> 
