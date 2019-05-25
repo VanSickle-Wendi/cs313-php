@@ -46,8 +46,10 @@ $db = get_db();
                      $statement->execute();
 
                      while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<option value='<?php echo $row[id]; ?>'>";
-                        echo "<?php echo $row[tempo]; ?>";
+                        $id = $row['id'];
+                        $tempo = $row['tempo'];
+                        echo "<option value='<?php echo $id; ?>'>";
+                        echo "<?php echo $tempo; ?>";
                         echo "</option>";
                         }
                         ?>
