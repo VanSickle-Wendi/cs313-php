@@ -34,14 +34,39 @@ $db = get_db();
             <h3 class="text-muted">The Singers</h3>
             <form method="post" action="meetSingers.php">
                <input type="text" name="songs">
-               <p>Enter "Beverly", "Shannon", or "Wendi" to see which song they sing lead on.</p>
-               <p>Enter "All" to see the songs no one claims.</p>
+               <br>
                <input type="submit" value="search">
-
+               <br>
+               <p>Enter a singer from the list below to see what song she sings lead on.               
             </form> 
             <hr>
 
          </div>
+         
+         <div class="row">
+            <table class="table table-striped table-condensed">
+               <thead>
+                  <tr>
+                     <th>Singers</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <?php
+                  //Get performances
+                  $stmt = $db->prepare('SELECT singer_name FROM singer ORDER BY singer_name');
+                  $stmt->execute();
+                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($rows as $r) {
+                     echo '<tr>';
+                     echo '<td>' . $r['singer_name'] . '</td>';
+                     echo '</tr>';
+                  }
+                  ?>
+
+               </tbody>
+            </table>
+         </div>         
+         
          <div class="row">
             <table class="table table-striped table-condensed">
                <thead>

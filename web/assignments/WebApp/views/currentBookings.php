@@ -34,11 +34,12 @@ $db = get_db();
             <h3 class="text-muted">Performances</h3>
             <form method="post" action="currentBookings.php">
                <input type="text" name="perform">
+               <br>
                <input type="submit" value="search">
+               <br>
+               <p>Enter the name of a venue from the list below.
             </form> 
             <hr>
-            <p>Enter "Beverly", "Shannon", or "Wendi" to see which song they sing lead on.</p>
-            <p>Enter "All" to see the songs no one claims.</p>
          </div>
 
          <div class="row">
@@ -55,16 +56,16 @@ $db = get_db();
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
-                     echo '<tr><a href="display.php?performList=' . '<td>' . $r['id'] . '</td>' . '">';
+                     echo '<tr>';
                      echo '<td>' . $r['venue_name'] . '</td>';
-                     echo '</a></tr>';
+                     echo '</tr>';
                   }
                   ?>
 
                </tbody>
             </table>
          </div>
-         
+
          <div class="row">
             <table class="table table-striped table-condensed">
                <thead>
