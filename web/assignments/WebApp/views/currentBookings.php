@@ -53,7 +53,6 @@
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
                      echo '<tr><a href="display.php?performList=' . '<td>' . $r['id'] .'</td>' . '">';
-                     echo '<td>' . $r['venue'] . '</td>';
                      echo '<td>' . $r['date'] . '</td>';
                      echo '<td>' . $r['time'] . '</td>';
                      echo '<td>' . $r['booked'] . '</td>';
