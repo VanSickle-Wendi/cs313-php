@@ -59,7 +59,7 @@ $db = get_db();
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
-                     echo '<tr><td>' . $r['id'] .'</td>' . '">';
+                     echo '<tr><td>' . $r['id'] .'</td>';
                      echo '<td>' . $r['singer_name'] . '</td>';
                      echo '<td>' . $r['title'] . '</td>';
                      echo '<td>' . $r['tempo'] . '</td>';
