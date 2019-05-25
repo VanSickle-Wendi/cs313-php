@@ -29,6 +29,11 @@ $db = get_db();
       $stmt->execute();
       $row = $stmt->fetch(PDO::FETCH_ASSOC);
       echo $row['title'];
+      echo "<p><span>" . $row['book'] . ' ';
+      echo $row['chapter'];
+      echo ':' . $row['verse'] . ' - ' . "</span>";
+      echo '"' . $row['content'] . '"' . "</p>";
+      echo '<br/>';
       ?>
 
       <footer class="footer">
