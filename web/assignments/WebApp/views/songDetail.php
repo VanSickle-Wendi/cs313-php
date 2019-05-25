@@ -27,7 +27,8 @@ $db = get_db();
                   <!-- I had to change line 1099 a{color} from #337AB7 to #fff to get white in the buttons -->
                   <li class="btn btn-primary"><a href="../index.php">View List</a></li>
                   <li role="presentation" class="btn btn-primary"><a href="views/songDetails.php">Song Details</a></li>
-
+                  <li role="presentation" class="btn btn-primary"><a href="meetSingers.php">The Singers</a></li>
+                  <li role="presentation" class="btn btn-primary"><a href="currentBookings.php">Performances</a></li>
                </ul>
             </nav>
             <h3 class="text-muted">Song Details</h3>
@@ -53,10 +54,10 @@ $db = get_db();
                      $genre = $row['genre'];
                      $background = $row['background'];
 
-                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   ?>
-                 
+
                </tbody>
             </table>
          </div>

@@ -27,6 +27,8 @@ $db = get_db();
                   <!-- I had to change line 1099 a{color} from #337AB7 to #fff to get white in the buttons -->
                   <li class="btn btn-primary"><a href="../index.php">View List</a></li>
                   <li role="presentation" class="btn btn-primary"><a href="songDetail.php">Song Details</a></li>
+                  <li role="presentation" class="btn btn-primary"><a href="meetSingers.php">The Singers</a></li>
+                  <li role="presentation" class="btn btn-primary"><a href="currentBookings.php">Performances</a></li>
 
                </ul>
             </nav>
@@ -36,9 +38,34 @@ $db = get_db();
                <input type="submit" value="search">
             </form> 
             <hr>
-            <p>Enter the singer's number to see which songs they sing lead on.</p>
-            <p>1 = Beverly&nbsp;&nbsp; 2 = Shannon&nbsp;&nbsp; 3 = Wendi&nbsp;&nbsp; 4 = All&nbsp;&nbsp;</p>
+            <p>Enter "Beverly", "Shannon", or "Wendi" to see which song they sing lead on.</p>
+            <p>Enter "All" to see the songs no one claims.</p>
          </div>
+
+         <div class="row">
+            <table class="table table-striped table-condensed">
+               <thead>
+                  <tr>
+                     <th>Venue</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <?php
+                  //Get performances
+                  $stmt = $db->prepare('SELECT venue_name FROM venue ORDER BY venue_name');
+                  $stmt->execute();
+                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($rows as $r) {
+                     echo '<tr><a href="display.php?performList=' . '<td>' . $r['id'] . '</td>' . '">';
+                     echo '<td>' . $r['venue_name'] . '</td>';
+                     echo '</a></tr>';
+                  }
+                  ?>
+
+               </tbody>
+            </table>
+         </div>
+         
          <div class="row">
             <table class="table table-striped table-condensed">
                <thead>
@@ -57,8 +84,8 @@ $db = get_db();
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
-                     echo '<tr><a href="display.php?performList=' . '<td>' . $r['id'] .'</td>' . '">';
-                     echo '<td>' . $r['venue_name'] . '</td>';                     
+                     echo '<tr><a href="display.php?performList=' . '<td>' . $r['id'] . '</td>' . '">';
+                     echo '<td>' . $r['venue_name'] . '</td>';
                      echo '<td>' . $r['date'] . '</td>';
                      echo '<td>' . $r['time'] . '</td>';
                      echo '</a></tr>';
