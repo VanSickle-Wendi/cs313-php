@@ -35,7 +35,8 @@ $db = get_db();
                <input type="text" name="songs">
                <input type="submit" value="search">
             </form> 
-            <p>Enter the singer's number to see which song they sing lead on.</p>
+            <hr>
+            <p>Enter the singer's number to see which songs they sing lead on.</p>
             <p>1 = Beverly&nbsp;&nbsp; 2 = Shannon&nbsp;&nbsp; 3 = Wendi&nbsp;&nbsp; 4 = All&nbsp;&nbsp;</p>
          </div>
          <div class="row">
