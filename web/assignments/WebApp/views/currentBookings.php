@@ -43,6 +43,7 @@ $db = get_db();
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
+                     <th>Venue</th>
                      <th>Date</th>
                      <th>Time</th>
                      <th>Booked</th>
@@ -58,6 +59,7 @@ $db = get_db();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
                      echo '<tr><a href="display.php?performList=' . '<td>' . $r['id'] .'</td>' . '">';
+                     echo '<td>' . $r['venue'] . '</td>';                     
                      echo '<td>' . $r['date'] . '</td>';
                      echo '<td>' . $r['time'] . '</td>';
                      echo '<td>' . $r['booked'] . '</td>';
