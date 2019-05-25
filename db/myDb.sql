@@ -34,6 +34,26 @@ CREATE TABLE performance (
    booked BOOLEAN NOT NULL
 );
 
+SELECT * FROM performance AS p JOIN venue AS v ON p.venue_id = v.id;
+
+INSERT INTO venue (venue_name)
+     VALUES ('Meridian SC'),
+            ('Affinity'),
+            ('Mallard Pointe'),
+            ('Creekside'),
+            ('Touchmark'),
+            ('Prestige'),
+            ('Nampa FM');
+
+INSERT INTO performance (date, time, venue_id, booked)
+     VALUES ('5/7/2019', '11:00', 1, 'yes'),
+            ('5/14/2019', '05:00', 2, 'yes'),
+            ('5/24/2019', '01:00', 3, 'yes'),
+            ('5/30/2019', '03:00', 4, 'yes');
+
+
+SELECT * FROM song AS s JOIN singer AS si ON s.lead_singer = si.id ORDER BY title;
+
 INSERT INTO song(title, tempo, genre, background, first_chord, lead_singer)
      VALUES ('American Dream', 'medium', 'country', 'guitar', 'D', 3),
             ('Blue to the Bone', 'medium', 'country', 'guitar', 'D', 4),
