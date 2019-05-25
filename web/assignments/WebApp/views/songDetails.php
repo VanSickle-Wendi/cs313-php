@@ -19,7 +19,6 @@ $db = get_db();
    </head>
 
    <body>
-
       <div class="container">
          <div class="header clearfix">
             <nav>
@@ -30,7 +29,7 @@ $db = get_db();
 
                </ul>
             </nav>
-            <h3 class="text-muted">Song Details</h3>
+            <h3 class="text-muted">Repertoire</h3>
          </div>
          <div class="row">
             <table class="table table-striped table-condensed">
@@ -46,13 +45,15 @@ $db = get_db();
                <tbody>
                   <?php
                   //Get Songs
-                  $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY title");
-                  $statement->execute();
-                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                  $s_details = $_GET['id'];
+                  $stmt = $db->prepare('SELECT * FROM song WHERE id=:id');
+                  $stmt->bindValue(':id', $s_details, PDO::PARAM_STR);
+                  $stmt->execute();
+                  while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
-//                     $tempo = $row['tempo'];
-//                     $genre = $row['genre'];
-//                     $background = $row['background'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
+                     $background = $row['background'];
 
                      echo "<tr>";
                      echo "<td>$title</td>";
@@ -60,12 +61,21 @@ $db = get_db();
                      echo "<a href='songDetails.php?id=<?php echo $row[id]; ?>' class='btn btn-default btn-xs'>Details</a>";
                      echo "</td>";
                      echo "</tr>";
-//                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
                   }
                   ?>
                </tbody>
             </table>
          </div>
+
+
+         <?php
+         $s_details = $_GET['id'];
+         $stmt = $db->prepare('SELECT * FROM song WHERE id=:id');
+         $stmt->bindValue(':id', $s_details, PDO::PARAM_STR);
+         $stmt->execute();
+         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+         ?>
 
          <footer class="footer">
             <p>&copy; 2019.</p>
