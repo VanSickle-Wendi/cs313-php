@@ -15,7 +15,7 @@ $db = get_db();
       <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
       <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/">
       <script src="javascript/javascript.js"></script>
-      <title>Repertoire</title>
+      <title>Song Details</title>
    </head>
 
    <body>
@@ -26,11 +26,11 @@ $db = get_db();
                <ul class="nav nav-pills pull-right">
                   <!-- I had to change line 1099 a{color} from #337AB7 to #fff to get white in the buttons -->
                   <li class="btn btn-primary"><a href="index.php">View List</a></li>
-                  <li role="presentation" class="btn btn-primary"><a href="views/add.php">Add Song</a></li>
+                  <li role="presentation" class="btn btn-primary"><a href="views/songDetails.php">Song Details</a></li>
 
                </ul>
             </nav>
-            <h3 class="text-muted">Repertoire</h3>
+            <h3 class="text-muted">Song Details</h3>
          </div>
          <div class="row">
             <table class="table table-striped table-condensed">
@@ -40,7 +40,6 @@ $db = get_db();
                      <th>Tempo</th>
                      <th>Genre</th>
                      <th>Background</th>
-                     <th>Get Song Info</th>
                   </tr>
                </thead>
                <tbody>
