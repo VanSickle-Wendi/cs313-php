@@ -46,7 +46,6 @@ $db = get_db();
                      <th>Venue</th>
                      <th>Date</th>
                      <th>Time</th>
-                     <th>Booked</th>
                   </tr>
                </thead>
                <tbody>
@@ -62,7 +61,6 @@ $db = get_db();
                      echo '<td>' . $r['venue_name'] . '</td>';                     
                      echo '<td>' . $r['date'] . '</td>';
                      echo '<td>' . $r['time'] . '</td>';
-                     echo '<td>' . $r['booked'] . '</td>';
                      echo '</a></tr>';
                   }
                   ?>
