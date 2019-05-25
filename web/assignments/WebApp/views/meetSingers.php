@@ -26,8 +26,8 @@ $db = get_db();
                <ul class="nav nav-pills pull-right">
                   <!-- I had to change line 1099 a{color} from #337AB7 to #fff to get white in the buttons -->
                   <li class="btn btn-primary"><a href="../index.php">View List</a></li>
-                  <li role="presentation" class="btn btn-primary"><a href="songDetails.php">Song Details</a></li>
-
+                  <li role="presentation" class="btn btn-primary"><a href="meetSingers.php">The Singers</a></li>
+                  <li role="presentation" class="btn btn-primary"><a href="currentBookings.php">Performances</a></li>
                </ul>
             </nav>
             <h3 class="text-muted">The Singers</h3>
