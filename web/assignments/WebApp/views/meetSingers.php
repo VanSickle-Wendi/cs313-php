@@ -53,12 +53,14 @@ $db = get_db();
                   <?php
                   //Get Songs
                   $songs = $_POST['songs'];
-                  $stmt = $db->prepare('SELECT * FROM song WHERE lead_singer=:id ORDER BY title');
+//                  SELECT * FROM song JOIN singer ON song.lead_singer = singer.id ORDER BY title;
+//                  $stmt = $db->prepare('SELECT * FROM song WHERE lead_singer=:id ORDER BY title');
+                  $stmt = $db->prepare('SELECT * FROM singer WHERE singer_name=:id ORDER BY title');
                   $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
-                     echo '<tr><a href="display.php?songList=' . '<td>' . $r['id'] .'</td>' . '">';
+                     echo '<tr><a href="display.php?songList=' . '<td>' . $r['id'] . '</td>' . '">';
                      echo '<td>' . $r['title'] . '</td>';
                      echo '<td>' . $r['tempo'] . '</td>';
                      echo '<td>' . $r['genre'] . '</td>';
