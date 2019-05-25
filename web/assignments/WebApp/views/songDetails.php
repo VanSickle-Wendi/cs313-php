@@ -50,7 +50,8 @@ $db = get_db();
                   $stmt->bindValue(':id', $s_details, PDO::PARAM_STR);
                   $stmt->execute();
                   $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                  echo $row['title'];
+                  $title = $row['title'];
+                  echo $title;
 //                  while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 //                     $title = $row['title'];
 //                     $tempo = $row['tempo'];
@@ -61,12 +62,7 @@ $db = get_db();
 //                     echo "<td>$title</td>";
 //                     echo "<td>";
 //                     echo "<a href='songDetails.php?id=<?php echo $row[id]; 
-                  ?>' class='btn btn-default btn-xs'>Details</a>";
-                  //                     echo "</td>";
-                  //                     echo "</tr>";
-                  //                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
-                  //                  }
-                  ?>
+//                  ?>
                </tbody>
             </table>
          </div>
