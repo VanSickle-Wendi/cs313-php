@@ -34,12 +34,11 @@ $db = get_db();
             <h3 class="text-muted">Performances</h3>
             <form method="post" action="currentBookings.php">
                <input type="text" name="perform">
-               <br>
+               <br><br>
                <input type="submit" value="search">
-               <br>
+               <br><br>
                <p>Enter the name of a venue from the list below.
             </form> 
-            <hr>
          </div>
 
          <div class="row">
