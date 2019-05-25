@@ -15,35 +15,62 @@ $db = get_db();
       <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
       <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/">
       <script src="javascript/javascript.js"></script>
-      <title>Song Details</title>
+      <title>Repertoire</title>
    </head>
 
    <body>
 
+      <div class="container">
+         <div class="header clearfix">
+            <nav>
+               <ul class="nav nav-pills pull-right">
+                  <!-- I had to change line 1099 a{color} from #337AB7 to #fff to get white in the buttons -->
+                  <li class="btn btn-primary"><a href="index.php">View List</a></li>
+                  <li role="presentation" class="btn btn-primary"><a href="views/add.php">Add Song</a></li>
+
+               </ul>
+            </nav>
+            <h3 class="text-muted">Repertoire</h3>
+         </div>
+         <div class="row">
+            <table class="table table-striped table-condensed">
+               <thead>
+                  <tr>
+                     <th>Title</th>
+                     <th>Tempo</th>
+                     <th>Genre</th>
+                     <th>Background</th>
+                     <th>Get Song Info</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <?php
+                  //Get Songs
+                  $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY title");
+                  $statement->execute();
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $title = $row['title'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
+                     $background = $row['background'];
+
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
+                  }
+                  ?>
+                 
+               </tbody>
+            </table>
+         </div>
+
+         <footer class="footer">
+            <p>&copy; 2019.</p>
+         </footer>
+
+      </div> <!-- /container -->
 
 
-      <?php
-      $s_details = $_GET['id'];
-      $stmt = $db->prepare('SELECT * FROM song WHERE id=:id');
-      $stmt->bindValue(':id', $s_details, PDO::PARAM_STR);
-      $stmt->execute();
-      $row = $stmt->fetch(PDO::FETCH_ASSOC);
-      echo $row['title'];
-      echo "<p><span>" . $row['book'] . ' ';
-      echo $row['chapter'];
-      echo ':' . $row['verse'] . ' - ' . "</span>";
-      echo '"' . $row['content'] . '"' . "</p>";
-      echo '<br/>';
-      ?>
-
-      <footer class="footer">
-         <p>&copy; 2019.</p>
-      </footer>
-
-   </div> <!-- /container -->
-
-
-   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-   <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-</body>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+   </body>
 </html>
+
