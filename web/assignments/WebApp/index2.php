@@ -24,7 +24,7 @@ $db = get_db();
       </form> 
     <?php
     $songs = $_POST['songs'];
-    $stmt = $db->prepare('SELECT * FROM song WHERE title=:id');
+    $stmt = $db->prepare('SELECT * FROM song WHERE lead_singer=:id');
     $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
