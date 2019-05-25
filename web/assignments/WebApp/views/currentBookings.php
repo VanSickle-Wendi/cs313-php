@@ -53,7 +53,7 @@ $db = get_db();
                   <?php
                   //Get performances
                   $perform = $_POST['perform'];
-                  $stmt = $db->prepare('SELECT * FROM performance WHERE venue_id=:id ORDER BY date');
+                  $stmt = $db->prepare('SELECT * FROM performance JOIN venue ON performance.venue_id = venue.id WHERE venue_name=:id ORDER BY date');
                   $stmt->bindValue(':id', $perform, PDO::PARAM_STR);
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
