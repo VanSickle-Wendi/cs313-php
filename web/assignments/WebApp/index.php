@@ -26,7 +26,7 @@ $db = get_db();
                <ul class="nav nav-pills pull-right">
                   <!-- I had to change line 1099 a{color} from #337AB7 to #fff to get white in the buttons -->
                   <li class="btn btn-primary"><a href="index.php">View List</a></li>
-                  <li role="presentation" class="btn btn-primary"><a href="add.php">Add Song</a></li>
+                  <li role="presentation" class="btn btn-primary"><a href="views/add.php">Add Song</a></li>
 
                </ul>
             </nav>
@@ -37,9 +37,10 @@ $db = get_db();
                <thead>
                   <tr>
                      <th>Title</th>
-                     <th>Tempo</th>
+<!--                     <th>Tempo</th>
                      <th>Genre</th>
-                     <th>Background</th>
+                     <th>Background</th>-->
+                     <th>Get Song Info</th>
                   </tr>
                </thead>
                <tbody>
@@ -49,11 +50,12 @@ $db = get_db();
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
-                     $tempo = $row['tempo'];
-                     $genre = $row['genre'];
-                     $background = $row['background'];
+//                     $tempo = $row['tempo'];
+//                     $genre = $row['genre'];
+//                     $background = $row['background'];
 
-                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                     echo "<tr><td>$title</td></tr>";
+//                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
                   }
                   ?>
                </tbody>
