@@ -1,5 +1,5 @@
 <?php 
-include('db/database.php');
+require "db/database.php";
 ?>
 <?php
    $query = "SELECT id, tempo FROM song";
