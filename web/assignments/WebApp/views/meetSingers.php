@@ -43,6 +43,7 @@ $db = get_db();
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
+                     <th>Singer</th>
                      <th>Title</th>
                      <th>Tempo</th>
                      <th>Genre</th>
@@ -59,6 +60,7 @@ $db = get_db();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
                      echo '<tr><a href="display.php?songList=' . '<td>' . $r['id'] .'</td>' . '">';
+                     echo '<td>' . $r['singer_name'] . '</td>';
                      echo '<td>' . $r['title'] . '</td>';
                      echo '<td>' . $r['tempo'] . '</td>';
                      echo '<td>' . $r['genre'] . '</td>';
