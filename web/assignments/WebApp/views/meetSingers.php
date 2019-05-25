@@ -40,7 +40,6 @@ $db = get_db();
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
-                     <th>Lead Singer</th>
                      <th>Title</th>
                      <th>Tempo</th>
                      <th>Genre</th>
