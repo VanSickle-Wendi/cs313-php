@@ -34,11 +34,13 @@ $db = get_db();
             <h3 class="text-muted">The Singers</h3>
             <form method="post" action="meetSingers.php">
                <input type="text" name="songs">
+               <p>Enter "Beverly", "Shannon", or "Wendi" to see which song they sing lead on.</p>
+               <p>Enter "All" to see the songs no one claims.</p>
                <input type="submit" value="search">
+
             </form> 
             <hr>
-            <p>Enter "Beverly", "Shannon", or "Wendi" to see which song they sing lead on.</p>
-            <p>Enter "All" to see the songs no one claims.</p>
+
          </div>
          <div class="row">
             <table class="table table-striped table-condensed">
