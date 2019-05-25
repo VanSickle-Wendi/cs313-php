@@ -59,13 +59,13 @@ $db = get_db();
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
-                     echo '<tr><a href="display.php?songList=' . '<td>' . $r['id'] .'</td>' . '">';
+                     echo '<tr><td>' . $r['id'] .'</td>' . '">';
                      echo '<td>' . $r['singer_name'] . '</td>';
                      echo '<td>' . $r['title'] . '</td>';
                      echo '<td>' . $r['tempo'] . '</td>';
                      echo '<td>' . $r['genre'] . '</td>';
                      echo '<td>' . $r['background'] . '</td>';
-                     echo '</a></tr>';
+                     echo '</tr>';
                   }
                   ?>
 
