@@ -25,8 +25,8 @@
                </ul>
             </nav>
             <h3 class="text-muted">Performances</h3>
-            <form method="post" action="meetSingers.php">
-               <input type="text" name="songs">
+            <form method="post" action="currentBookings.php">
+               <input type="text" name="perform">
                <input type="submit" value="search">
             </form> 
             <hr>
