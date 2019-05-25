@@ -19,71 +19,26 @@ $db = get_db();
    </head>
 
    <body>
-      <div class="container">
-         <div class="header clearfix">
-            <nav>
-               <ul class="nav nav-pills pull-right">
-                  <!-- I had to change line 1099 a{color} from #337AB7 to #fff to get white in the buttons -->
-                  <li class="btn btn-primary"><a href="index.php">View List</a></li>
-                  <li role="presentation" class="btn btn-primary"><a href="views/add.php">Add Song</a></li>
-
-               </ul>
-            </nav>
-            <h3 class="text-muted">Repertoire</h3>
-         </div>
-         <div class="row">
-            <table class="table table-striped table-condensed">
-               <thead>
-                  <tr>
-                     <th>Title</th>
-<!--                     <th>Tempo</th>
-                     <th>Genre</th>
-                     <th>Background</th>-->
-                     <th>Get Song Info</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <?php
-                  //Get Songs
-                  $s_details = $_GET['id'];
-                  $stmt = $db->prepare('SELECT * FROM song WHERE id=:id');
-                  $stmt->bindValue(':id', $s_details, PDO::PARAM_STR);
-                  $stmt->execute();
-                  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                  $title = $row['title'];
-                  echo $title;
-//                  while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-//                     $title = $row['title'];
-//                     $tempo = $row['tempo'];
-//                     $genre = $row['genre'];
-//                     $background = $row['background'];
-//
-//                     echo "<tr>";
-//                     echo "<td>$title</td>";
-//                     echo "<td>";
-//                     echo "<a href='songDetails.php?id=<?php echo $row[id]; 
-//                  ?>
-               </tbody>
-            </table>
-         </div>
 
 
-         <?php
-         $s_details = $_GET['id'];
-         $stmt = $db->prepare('SELECT * FROM song WHERE id=:id');
-         $stmt->bindValue(':id', $s_details, PDO::PARAM_STR);
-         $stmt->execute();
-         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-         ?>
 
-         <footer class="footer">
-            <p>&copy; 2019.</p>
-         </footer>
+      <?php
+      $s_details = $_GET['id'];
+      $stmt = $db->prepare('SELECT * FROM song WHERE id=:id');
+      $stmt->bindValue(':id', $s_details, PDO::PARAM_STR);
+      $stmt->execute();
+      $row = $stmt->fetch(PDO::FETCH_ASSOC);
+      echo $row['title'];
+      ?>
 
-      </div> <!-- /container -->
+      <footer class="footer">
+         <p>&copy; 2019.</p>
+      </footer>
+
+   </div> <!-- /container -->
 
 
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-   </body>
+   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+   <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
 </html>
