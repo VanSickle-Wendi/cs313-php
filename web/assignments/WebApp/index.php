@@ -54,7 +54,12 @@ $db = get_db();
 //                     $genre = $row['genre'];
 //                     $background = $row['background'];
 
-                     echo "<tr><td>$title</td></tr>";
+                     echo "<tr>";
+                     echo "<td>$title</td>";
+                     echo "<td>";
+                     echo "<a href='songDetails.php?id=<?php echo $row[id]; ?>'>Details</a>";
+                     echo "</td>";
+                     echo "</tr>";
 //                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
                   }
                   ?>
