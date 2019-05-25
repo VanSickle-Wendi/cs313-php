@@ -3,10 +3,6 @@ require "db/database.php";
 $db = get_db();
 //include('database.php');
 ?>
-<?php
-$query = "SELECT id, tempo FROM song";
-$tempo = pg_query($query) or die('Query Failed ' . pg_last_error());
-?>
 <!DOCTYPE html>
 <html lang="en-us">
    <head>
@@ -54,7 +50,8 @@ $tempo = pg_query($query) or die('Query Failed ' . pg_last_error());
                         echo "<option value='<?php echo $row[id]; ?>'>";
                         echo "<?php echo $row[$tempo]; ?>";
                         echo "Select Tempo" . "</option>";
-                        ?>
+                     }
+                     ?>
                   </select>
                </div>
                <div class="form-group">
