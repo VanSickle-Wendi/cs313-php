@@ -42,14 +42,12 @@ $db = get_db();
                   <select name="tempo" class="form-control" id="tempo">
                      <option value="0">Select Tempo</option>
                      <?php
-                     $statement = $db->prepare("SELECT id, tempo FROM song");
+                     $statement = $db->prepare("SELECT tempo FROM song");
                      $statement->execute();
 
                      while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
                         $tempo = $row['tempo'];
-                        echo "<option value='$id'>";
-                        echo "$tempo";
+                        echo "<option value='$tempo'>";
                         echo "Select Tempo" . "</option>";
                      }
                      ?>
