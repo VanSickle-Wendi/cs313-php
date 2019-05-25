@@ -50,7 +50,7 @@ $db = get_db();
                   <?php
                   //Get Songs
                   $songs = $_POST['songs'];
-                  $stmt = $db->prepare('SELECT * FROM song JOIN singer ON lead_singer = singer_name WHERE lead_singer=:id ORDER BY title');
+                  $stmt = $db->prepare('SELECT * FROM song WHERE lead_singer=:id JOIN singer ON lead_singer = singer_name  ORDER BY title');
                   $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
