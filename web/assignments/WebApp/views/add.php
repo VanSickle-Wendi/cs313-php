@@ -1,7 +1,9 @@
+<?php 
+include('db/database.php');
+?>
 <?php
-require "db/database.php";
-$db = get_db();
-//include('database.php');
+   $query = "SELECT id, tempo FROM song";
+   $tempo = pg_query($query) or die('Query Failed ' . pg_last_error());
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -41,18 +43,8 @@ $db = get_db();
                   <label for="tempo">Tempo</label>
                   <select name="tempo" class="form-control" id="tempo">
                      <option value="0">Select Tempo</option>
-                     <?php
-                     $statement = $db->prepare("SELECT id, tempo FROM song");
-                     $statement->execute();
-
-                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $tempo = $row['tempo'];
-                        echo "<option value='<?php echo $id; ?>'>";
-                        echo "<?php echo $tempo; ?>";
-                        echo "</option>";
-                        }
-                        ?>
+                     <?php while ($row = pg_fetch_array($tempo, null, PGSQL_ASSOC))  ?>
+                     <option value="<?php echo $row['id']; ?><?php echo $row['tempo']; ?></option>
                   </select>
                </div>
                <div class="form-group">
