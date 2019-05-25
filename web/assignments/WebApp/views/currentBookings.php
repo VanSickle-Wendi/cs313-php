@@ -1,3 +1,9 @@
+<?php
+require "../db/database.php";
+$db = get_db();
+//include('database.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en-us">
    <head>
