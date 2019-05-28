@@ -1,4 +1,4 @@
-/* Multiple line comments can 
+SEL/* Multiple line comments can 
    be written like this */
 
 --Create two tables (single line comments like this)
