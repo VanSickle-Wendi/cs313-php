@@ -14,10 +14,10 @@ $db = get_db();
          <h1>Add Scripture</h1>
       </header>
       <form>
-         <input type="text" name="book" id="book">
-         <input type="text" name="chapter" id="chapter">
-         <input type="text" name="verse" id="verse">
-         <input type="textarea" name="content" id="content">
+         <input type="text" name="book" id="book"><br><br>
+         <input type="text" name="chapter" id="chapter"><br><br>
+         <input type="text" name="verse" id="verse"><br><br>
+         <input type="textarea" name="content" id="content"><br><br>
 
             <?php 
                 $topic['fa'] = "Faith";
@@ -26,7 +26,7 @@ $db = get_db();
                 
                 foreach($topic as $key => $value){
             ?>
-                    <label><input type="checkbox" name="topic[]" value="<?php echo  $key; ?>"><?php echo $value;?></label><br>     
+                    <label><input type="checkbox" name="topic[]" value="<?php echo  $key; ?>"><?php echo $value;?></label><br><br>     
             <?php
                 }
             ?>         
