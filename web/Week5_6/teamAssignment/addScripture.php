@@ -29,8 +29,70 @@ $db = get_db();
             <?php
          }
          ?>
-            <input type="submit" value="Add Scripture">
+
+         <?php
+         //Get topics
+         $statement = $db->prepare("SELECT name FROM topic");
+         $statement->execute();
+         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            $name = $row['name'];
+            ?>
+            <label><input type="radio" name="topic" value="<?php echo $name; ?>"><?php echo $name; ?></label><br><br>            <?php
+         }
+         ?>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <input type="submit" value="Add Scripture">
       </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <?php
       foreach ($db->query('SELECT * FROM scriptures') as $row) {
