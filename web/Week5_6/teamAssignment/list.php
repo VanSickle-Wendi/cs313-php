@@ -10,4 +10,4 @@ echo "$book\n";
 echo "$chapter\n";
 echo "$verse\n";
 echo "$content";
-echo "$major";
+echo "$topic";
