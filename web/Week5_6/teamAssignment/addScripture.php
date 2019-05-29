@@ -25,7 +25,7 @@ $db = get_db();
 
          foreach ($topic as $t) {
             ?>
-            <label><input type="checkbox" name="topic" value="<?php echo $t; ?>"><?php echo $t; ?></label><br><br>     
+            <label><input type="radio" name="topic" value="<?php echo $t; ?>"><?php echo $t; ?></label><br><br>     
             <?php
          }
          ?>
