@@ -18,17 +18,7 @@ $db = get_db();
          <input type="text" name="verse" id="verse"><br><br>
          <input type="textarea" name="content" id="content"><br><br>
 
-         <?php
-         $topic[] = "Faith";
-         $topic[] = "Sacrifice";
-         $topic[] = "Charity";
 
-         foreach ($topic as $t) {
-            ?>
-            <label><input type="radio" name="topic" value="<?php echo $t; ?>"><?php echo $t; ?></label><br><br>     
-            <?php
-         }
-         ?>
 
          <?php
          //Get topics
