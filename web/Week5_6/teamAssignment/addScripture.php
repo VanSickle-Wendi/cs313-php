@@ -19,13 +19,13 @@ $db = get_db();
          <input type="textarea" name="content" id="content"><br><br>
 
          <?php
-         $topic['fa'] = "Faith";
-         $topic['sa'] = "Sacrifice";
-         $topic['ch'] = "Charity";
+         $topic[] = "Faith";
+         $topic[] = "Sacrifice";
+         $topic[] = "Charity";
 
-         foreach ($topic as $key => $value) {
+         foreach ($topic as $t) {
             ?>
-            <label><input type="checkbox" name="topic[]" value="<?php echo $key; ?>"><?php echo $value; ?></label><br><br>     
+            <label><input type="checkbox" name="topic" value="<?php echo $t; ?>"><?php echo $t; ?></label><br><br>     
             <?php
          }
          ?>
