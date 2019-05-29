@@ -9,5 +9,5 @@ $topic = htmlspecialchars($_POST['topic']);
 echo "$book\n";
 echo "$chapter\n";
 echo "$verse\n";
-echo "$content";
-echo "$topic";
+echo "$content\n";
+echo "$topic\n";
