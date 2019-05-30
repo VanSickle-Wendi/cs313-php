@@ -15,6 +15,7 @@ INSERT INTO topic (name)
    VALUES ('Faith'), ('Sacrifice'), ('Charity');
 
 CREATE TABLE scriptures_topic (
+   id SERIAL PRIMARY KEY,
    scriptures_id INT REFERENCES scriptures(id),
    topic_id INT REFERENCES topic(id)
 );

@@ -29,33 +29,19 @@ $db = get_db();
             ?>
             <label><input type="radio" name="topic" value="<?php echo $name; ?>"><?php echo $name; ?></label><br><br>            <?php
          }
+         
+         $statement = $db->prepare("INSERT INTO scriptures (book, chapter, verse, content)VALUES ('MMM', 67, 72, 'The darkness comprehended it not." . "INSERT INTO topic ");
+         $statement->execute();
          ?>   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
          <input type="submit" value="Add Scripture">
       </form>
 
 
+INSERT INTO note_user (username, password) VALUES ('john', 'pass');
 
-
-
+INSERT INTO scriptures (book, chapter, verse, content) 
+   VALUES ('John', 1, 5, 'And the light shineth in darkness; and the darkness comprehended it not.');
 
 
 
