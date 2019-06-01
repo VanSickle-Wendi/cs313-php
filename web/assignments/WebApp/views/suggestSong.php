@@ -50,7 +50,7 @@ $db = get_db();
                      $statement = $db->prepare("SELECT song_title, artist FROM songsuggest");
                      $statement->execute();
                      while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $title = $row['title'];
+                        $title = $row['song_title'];
                         $artist = $row['artist'];
 
                         echo "<tr><td>$title</td><td>$artist</td></tr>";
