@@ -35,6 +35,7 @@ $db = get_db();
          </div>
          <div>
             <?php
+            $sort = "";
             $sort = $_POST["sort"];
             ?>
             <form method="post" action="songDetail.php">
