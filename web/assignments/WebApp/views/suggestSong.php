@@ -47,7 +47,7 @@ $artist = htmlspecialchars($_POST['artist']);
                <label for="artist">Artist&nbsp;&nbsp;</label>
                <input type="text" name="artist">
 
-               <input type="submit" value="Add Song">
+               <input type="submit" value="Add Song"><br><br>
             </form>
           
          </div>         
