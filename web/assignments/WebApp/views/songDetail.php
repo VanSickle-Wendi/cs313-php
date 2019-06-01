@@ -39,10 +39,10 @@ $db = get_db();
             ?>
             <form method="post" action="songDetail.php">
                <p>Sort by: &nbsp; &nbsp;
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="title") echo "checked";?>value="title"> Tempo &nbsp; &nbsp;            
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="tempo") echo "checked";?>value="tempo"> Genre &nbsp; &nbsp;
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="genre") echo "checked";?>value="genre"> Tempo &nbsp; &nbsp;            
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="background") echo "checked";?>value="background"> Genre &nbsp; &nbsp;                  
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="title") echo "checked";?>value="title"> Title &nbsp; &nbsp;            
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="tempo") echo "checked";?>value="tempo"> Tempo &nbsp; &nbsp;
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="genre") echo "checked";?>value="genre"> Genre &nbsp; &nbsp;            
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="background") echo "checked";?>value="background"> Background &nbsp; &nbsp;                  
 
                   <input type="submit" value="Submit"></p>
             </form>
