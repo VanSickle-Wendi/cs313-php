@@ -2,6 +2,9 @@
 require "../db/database.php";
 $db = get_db();
 //include('database.php');
+
+$song_title = htmlspecialchars($_POST['song_title']);
+$artist = htmlspecialchars($_POST['artist']);
 ?>
 
 <!DOCTYPE html>
@@ -29,11 +32,26 @@ $db = get_db();
                   <li role="presentation" class="btn btn-primary btn-xs"><a href="songDetail.php">Song Details</a></li>
                   <li role="presentation" class="btn btn-primary btn-xs"><a href="meetSingers.php">The Singers</a></li>
                   <li role="presentation" class="btn btn-primary btn-xs"><a href="currentBookings.php">Performances</a></li>
-                  <li role="presentation" class="btn btn-primary btn-xs"><a href="suggestSong.php">Suggest Song</a></li>
+                  <li role="presentation" class="btn btn-primary btn-xs"><a href="suggestSong.php">Suggest a Song</a></li>
                </ul>
             </nav>
             <h3 class="text-muted">Suggest a Song</h3>
          </div>
+
+         <div>
+            <form method="post" action="suggestSong.php">
+
+               <label for="song_title">Song Title</label>
+               <input type="text" name="song_title">
+
+               <label for="artist">Artist</label>
+               <input type="text" name="artist">
+               <br>
+               <input type="submit" value="Add Song">
+            </form>
+          
+         </div>         
+
 
          <div class="row">
             <table class="table table-striped table-condensed">
@@ -47,16 +65,16 @@ $db = get_db();
 
                   <?php
                   //Get Songs
-                     $statement = $db->prepare("SELECT song_title, artist FROM songsuggest");
-                     $statement->execute();
-                     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $title = $row['song_title'];
-                        $artist = $row['artist'];
+                  $statement = $db->prepare("SELECT song_title, artist FROM songsuggest");
+                  $statement->execute();
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $title = $row['song_title'];
+                     $artist = $row['artist'];
 
-                        echo "<tr><td>$title</td><td>$artist</td></tr>";
-                     }
+                     echo "<tr><td>$title</td><td>$artist</td></tr>";
+                  }
                   ?>
-                  
+
 
                </tbody>
             </table>

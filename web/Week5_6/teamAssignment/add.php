@@ -51,7 +51,7 @@ $db = get_db();
 
             <input type="submit" value="Add Scripture">
          </form>
-+
+
       </div>
       <?php
       $stmt = $db->prepare('SELECT * FROM scriptures');

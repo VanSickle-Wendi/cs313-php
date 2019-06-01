@@ -27,7 +27,7 @@ $db = get_db();
                   <li role="presentation" class="btn btn-primary btn-xs"><a href="views/songDetail.php">Song Details</a></li>
                   <li role="presentation" class="btn btn-primary btn-xs"><a href="views/meetSingers.php">The Singers</a></li>
                   <li role="presentation" class="btn btn-primary btn-xs"><a href="views/currentBookings.php">Performances</a></li>
-                  <li role="presentation" class="btn btn-primary btn-xs"><a href="views/suggestSong.php">Suggest Song</a></li>                  
+                  <li role="presentation" class="btn btn-primary btn-xs"><a href="views/suggestSong.php">Suggest a Song</a></li>                  
                </ul>
             </nav>
             <h3 class="text-muted">Mom and Double Image</h3>
