@@ -71,7 +71,7 @@ $db = get_db();
                      $genre = $row['genre'];
                      $background = $row['background'];
 
-                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                     echo "<tr><td>$title" . '*' . "</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
                   ?>
@@ -87,7 +87,7 @@ $db = get_db();
                      $genre = $row['genre'];
                      $background = $row['background'];
 
-                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                     echo "<tr><td>$title</td><td>$tempo" . '*' . "</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
                   ?>
@@ -103,7 +103,7 @@ $db = get_db();
                      $genre = $row['genre'];
                      $background = $row['background'];
 
-                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre" . '*' . "</td><td>$background</td></tr>";
                   }
                   }
                   ?>
@@ -119,16 +119,13 @@ $db = get_db();
                      $genre = $row['genre'];
                      $background = $row['background'];
 
-                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background" . '*' . "</td></tr>";
                   }
                   }
                   ?>                  
 
                </tbody>
             </table>
-            <?php
-            $sort = "";
-            ?>
          </div>
 
          <footer class="footer">
