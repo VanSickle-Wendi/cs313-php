@@ -74,6 +74,70 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   ?>
+                  
+                  <?php
+                  //Get Songs
+                  if($sort = "title") {
+                  $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY title");
+                  $statement->execute();
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $title = $row['title'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
+                     $background = $row['background'];
+
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                  }
+                  }
+                  ?>
+                  
+                  <?php
+                  //Get Songs
+                  if($sort = "tempo") {
+                  $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY tempo");
+                  $statement->execute();
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $title = $row['title'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
+                     $background = $row['background'];
+
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                  }
+                  }
+                  ?>
+                  
+                  <?php
+                  //Get Songs
+                  if($sort = "genre") {
+                  $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY genre");
+                  $statement->execute();
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $title = $row['title'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
+                     $background = $row['background'];
+
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                  }
+                  }
+                  ?>
+                  
+                  <?php
+                  //Get Songs
+                  if($sort = "background") {
+                  $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY background");
+                  $statement->execute();
+                  while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $title = $row['title'];
+                     $tempo = $row['tempo'];
+                     $genre = $row['genre'];
+                     $background = $row['background'];
+
+                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                  }
+                  }
+                  ?>                  
 
                </tbody>
             </table>
