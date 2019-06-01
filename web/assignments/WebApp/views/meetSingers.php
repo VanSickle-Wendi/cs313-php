@@ -33,6 +33,7 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">The Singers</h3>
             <hr>
+            
             <form method="post" action="meetSingers.php">
                <label for="singers">Enter a singer from the list below to see what song she sings lead on.</label><br><br>
                <input type="text" name="songs">
@@ -47,37 +48,14 @@ $db = get_db();
             ?>
             <form method="post" action="meetSingers.php">
                <p>Sort by: &nbsp; &nbsp;
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "all") echo "checked"; ?>value="all"> All &nbsp; &nbsp;            
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "beverly") echo "checked"; ?>value="beverly"> Beverly &nbsp; &nbsp;
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "shannon") echo "checked"; ?>value="shannon"> Shannon &nbsp; &nbsp;            
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "wendi") echo "checked"; ?>value="wendi"> Wendi &nbsp; &nbsp;                  
+                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
+                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Beverly") echo "checked"; ?>value="Beverly"> Beverly &nbsp; &nbsp;
+                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
+                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
 
                   <input type="submit" value="Submit"></p>
             </form>       
-
-            <div class="row">
-               <table class="table table-striped table-condensed">
-                  <thead>
-                     <tr>
-                        <th>Singers</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <?php
-                     //Get singer 
-                     $stmt = $db->prepare('SELECT singer_name FROM singer ORDER BY singer_name');
-                     $stmt->execute();
-                     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                     foreach ($rows as $r) {
-                        echo '<tr>';
-                        echo '<td>' . $r['singer_name'] . '</td>';
-                        echo '</tr>';
-                     }
-                     ?>
-
-                  </tbody>
-               </table>
-            </div>         
+      
 
             <div class="row">
                <table class="table table-striped table-condensed">
