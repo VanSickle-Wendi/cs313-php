@@ -24,11 +24,11 @@ $db = get_db();
          <div class="header clearfix">
             <nav>
                <ul class="nav nav-pills pull-right">
-                  <!-- I had to change line 1099 a{color} from #337AB7 to #fff to get white in the buttons -->
-                  <li class="btn btn-primary btn-sm"><a href="../index.php">View List</a></li>
-                  <li role="presentation" class="btn btn-primary btn-sm"><a href="songDetail.php">Song Details</a></li>
-                  <li role="presentation" class="btn btn-primary btn-sm"><a href="meetSingers.php">The Singers</a></li>
-                  <li role="presentation" class="btn btn-primary btn-sm"><a href="currentBookings.php">Performances</a></li>
+                  <li class="btn btn-primary btn-xs"><a href="../index.php">View List</a></li>
+                  <li class="btn btn-primary btn-xs"><a href="songDetail.php">Song Details</a></li>
+                  <li class="btn btn-primary btn-xs"><a href="meetSingers.php">The Singers</a></li>
+                  <li class="btn btn-primary btn-xs"><a href="currentBookings.php">Performances</a></li>
+                  <li class="btn btn-primary btn-xs"><a href="suggestSong.php">Suggest a Song</a></li>                  
                </ul>
             </nav>
             <h3 class="text-muted">Performances</h3>
