@@ -42,12 +42,12 @@ $artist = htmlspecialchars($_POST['artist']);
             <form method="post" action="suggestSong.php">
 
                <label for="song_title">Song Title&nbsp;&nbsp;</label>
-               <input type="text" name="song_title">
+               <input type="text" name="song_title">&nbsp;&nbsp;
 
                <label for="artist">Artist&nbsp;&nbsp;</label>
-               <input type="text" name="artist">
+               <input type="text" name="artist">&nbsp;&nbsp;
 
-               <input type="submit" value="Add Song"><br><br>
+               <input type="submit" value="Add Song"><br><br><br>
             </form>
           
          </div>         
