@@ -35,7 +35,7 @@ $db = get_db();
             <hr>
             <form method="post" action="meetSingers.php">
                <label for="singers">Enter a singer from the list below to see what song she sings lead on.</label><br><br>
-               <input type="text" name="singers">
+               <input type="text" name="songs">
                <br><br>
                <input type="submit" value="search">                             
             </form> 
