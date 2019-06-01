@@ -47,13 +47,13 @@ $db = get_db();
             ?>
             <form method="post" action="meetSingers.php">
                <p>Sort by: &nbsp; &nbsp;
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "all") echo "checked"; ?>value="all"> All &nbsp; &nbsp;            
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "beverly") echo "checked"; ?>value="beverly"> Beverly &nbsp; &nbsp;
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "shannon") echo "checked"; ?>value="shannon"> Shannon &nbsp; &nbsp;            
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "wendi") echo "checked"; ?>value="wendi"> Wendi &nbsp; &nbsp;                  
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "title") echo "checked"; ?>value="title"> Title &nbsp; &nbsp;            
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "tempo") echo "checked"; ?>value="tempo"> Tempo &nbsp; &nbsp;
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "genre") echo "checked"; ?>value="genre"> Genre &nbsp; &nbsp;            
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "background") echo "checked"; ?>value="background"> Background &nbsp; &nbsp;                  
 
                   <input type="submit" value="Submit"></p>
-            </form>         
+            </form>       
          
          <div class="row">
             <table class="table table-striped table-condensed">
