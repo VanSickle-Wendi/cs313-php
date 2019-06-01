@@ -52,10 +52,16 @@ $db = get_db();
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
-                     <th>Title</th>
-                     <th>Tempo</th>
-                     <th>Genre</th>
-                     <th>Background</th>
+                     <?php
+                     if(isset($sort) && $sort==="title") {
+                     echo "<th>Title*</th><th>Tempo</th><th>Genre</th><th>Background</th>";
+                     }elseif(isset($sort) && $sort==="tempo") {
+                     echo "<th>Title</th><th>Tempo*</th><th>Genre</th><th>Background</th>";
+                     }if(isset($sort) && $sort==="genre") {
+                     echo "<th>Title</th><th>Tempo</th><th>Genre*</th><th>Background</th>";
+                     if(isset($sort) && $sort==="background") {
+                     echo "<th>Title</th><th>Tempo</th><th>Genre</th><th>Background*</th>";
+                     ?>
                   </tr>
                </thead>
                <tbody>
@@ -66,7 +72,7 @@ $db = get_db();
                   $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY title");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                     $title = $row['title'] . "*";
+                     $title = $row['title'];
                      $tempo = $row['tempo'];
                      $genre = $row['genre'];
                      $background = $row['background'];
@@ -83,7 +89,7 @@ $db = get_db();
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
-                     $tempo = $row['tempo'] . "*";
+                     $tempo = $row['tempo'];
                      $genre = $row['genre'];
                      $background = $row['background'];
 
@@ -100,7 +106,7 @@ $db = get_db();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
                      $tempo = $row['tempo'];
-                     $genre = $row['genre'] . "*";
+                     $genre = $row['genre'];
                      $background = $row['background'];
 
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
@@ -117,7 +123,7 @@ $db = get_db();
                      $title = $row['title'];
                      $tempo = $row['tempo'];
                      $genre = $row['genre'];
-                     $background = $row['background'] . "*";
+                     $background = $row['background'];
 
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
