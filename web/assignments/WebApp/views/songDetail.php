@@ -62,7 +62,7 @@ $db = get_db();
                      } elseif (isset($sort) && $sort === "background") {
                         echo "<th>Title</th><th>Tempo</th><th>Genre</th><th>Background*</th>";
                      } else {
-                        echo "<th>Title</th><th>Tempo</th><th>Genre</th><th>Background</th>";
+                        echo "<th>Title*</th><th>Tempo</th><th>Genre</th><th>Background</th>";
                      }
                      ?>                    
                   </tr>
