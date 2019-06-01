@@ -37,9 +37,6 @@ $db = get_db();
                <thead>
                   <tr>
                      <th>Title</th>
-<!--                     <th>Tempo</th>
-                     <th>Genre</th>
-                     <th>Background</th>-->
                      <th>Get Song Info</th>
                   </tr>
                </thead>
@@ -50,17 +47,7 @@ $db = get_db();
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
-//                     $tempo = $row['tempo'];
-//                     $genre = $row['genre'];
-//                     $background = $row['background'];
-
-                     echo "<tr>";
-                     echo "<td>$title</td>";
-                     echo "<td>";
-                     echo "<a href='views/songDetail.php?id=<?php echo $row[id]; ?>' class='btn btn-default btn-xs'>Details</a>";
-                     echo "</td>";
-                     echo "</tr>";
-//                     echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";                     
+                     echo "<tr><td>$title</td></tr>";                     
                   }
                   ?>
                  
