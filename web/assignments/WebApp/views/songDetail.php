@@ -34,13 +34,17 @@ $db = get_db();
             <h3 class="text-muted">Song Details</h3>
          </div>
          <div>
-            <form action="/action_page.php">
+            <?php
+            $sort = $_POST["sort"];
+            ?>
+            <form method="post" action="/action_page.php">
                <p>Sort by: &nbsp; &nbsp;
-               <input type="radio" name="tempo" value="male"> Tempo &nbsp; &nbsp;
-               <input type="radio" name="genre" value="female"> Genre &nbsp; &nbsp;
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="tempo") echo "checked";?>value="tempo"> Tempo &nbsp; &nbsp;            
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort=="genre") echo "checked";?>value="genre"> Genre &nbsp; &nbsp;
 
-               <input type="submit" value="Submit"></p>
+                  <input type="submit" value="Submit"></p>
             </form>
+            echo $sort;
          </div>
          <div class="row">
             <table class="table table-striped table-condensed">
