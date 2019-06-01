@@ -41,6 +41,20 @@ $db = get_db();
             </form> 
          </div>
          
+         <div>
+            <?php
+            $sort = $_POST["sort"];
+            ?>
+            <form method="post" action="meetSingers.php">
+               <p>Sort by: &nbsp; &nbsp;
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "all") echo "checked"; ?>value="all"> All &nbsp; &nbsp;            
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "beverly") echo "checked"; ?>value="beverly"> Beverly &nbsp; &nbsp;
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "shannon") echo "checked"; ?>value="shannon"> Shannon &nbsp; &nbsp;            
+                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "wendi") echo "checked"; ?>value="wendi"> Wendi &nbsp; &nbsp;                  
+
+                  <input type="submit" value="Submit"></p>
+            </form>         
+         
          <div class="row">
             <table class="table table-striped table-condensed">
                <thead>
