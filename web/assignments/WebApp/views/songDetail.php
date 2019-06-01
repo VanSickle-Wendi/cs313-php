@@ -33,6 +33,15 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">Song Details</h3>
          </div>
+         <div>
+            <form action="/action_page.php">
+               <p>Sort by:</p>
+               <input type="radio" name="tempo" value="male"> Tempo<br>
+               <input type="radio" name="genre" value="female"> Genre<br>
+
+               <input type="submit" value="Submit">
+            </form>
+         </div>
          <div class="row">
             <table class="table table-striped table-condensed">
                <thead>
