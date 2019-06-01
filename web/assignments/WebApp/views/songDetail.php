@@ -35,7 +35,6 @@ $db = get_db();
          </div>
          <div>
             <?php
-            $sort = "";
             $sort = $_POST["sort"];
             ?>
             <form method="post" action="songDetail.php">
@@ -75,6 +74,7 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
+                  $sort = "";
                   ?>
                   
                   <?php
@@ -91,6 +91,7 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
+                  $sort = "";                  
                   ?>
                   
                   <?php
@@ -107,6 +108,7 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
+                  $sort = "";                  
                   ?>
                   
                   <?php
@@ -123,6 +125,7 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
+                  $sort = "";                  
                   ?>                  
 
                </tbody>
