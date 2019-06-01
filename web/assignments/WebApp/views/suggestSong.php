@@ -55,7 +55,8 @@ $db = get_db();
 
                         echo "<tr><td>$title</td><td>$artist</td></tr>";
                      }
-                  ?>                  
+                  ?>
+                  
 
                </tbody>
             </table>
