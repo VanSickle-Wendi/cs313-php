@@ -47,7 +47,7 @@ $db = get_db();
 
                   <?php
                   //Get Songs
-                     $statement = $db->prepare("SELECT title, artist FROM songsuggest");
+                     $statement = $db->prepare("SELECT song_title, artist FROM songsuggest");
                      $statement->execute();
                      while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                         $title = $row['title'];
