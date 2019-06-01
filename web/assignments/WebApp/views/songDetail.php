@@ -66,7 +66,6 @@ $db = get_db();
                   //Get Songs
                   if(isset($sort) && $sort==="title") {
                   $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY title");
-                  }
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
@@ -75,6 +74,7 @@ $db = get_db();
                      $background = $row['background'];
 
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
+                  }
                   }
                   ?>
                   
@@ -82,7 +82,6 @@ $db = get_db();
                   //Get Songs
                   if(isset($sort) && $sort==="tempo") {
                   $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY tempo");
-                  }
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
@@ -92,7 +91,7 @@ $db = get_db();
 
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
-
+                  }
                   ?>
                   
                   <?php
