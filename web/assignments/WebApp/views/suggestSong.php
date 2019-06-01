@@ -45,10 +45,10 @@ $artist = htmlspecialchars($_POST['artist']);
                <input type="text" name="song_title">&nbsp;&nbsp;
 
                <label for="artist">Artist&nbsp;&nbsp;</label>
-               <input type="text" name="artist">&nbsp;&nbsp;<br><br>
+               <input type="text" name="artist">&nbsp;&nbsp;
 
                <label for="song_info">Song Info</label>
-               <textarea rows="4" cols="30" name="song_info"></textarea>&nbsp;&nbsp;               
+               <textarea rows="3" cols="26" name="song_info"></textarea>&nbsp;&nbsp;               
 
                <input type="submit" value="Add Song"><br><br><br>
             </form>
