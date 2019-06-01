@@ -34,7 +34,8 @@ $db = get_db();
             <h3 class="text-muted">The Singers</h3>
             <hr>
             <form method="post" action="meetSingers.php">
-               <input type="text" name="songs"><p>&nbsp;&nbsp;Enter a singer from the list below to see what song she sings lead on.</p>
+               <label for="singers">Enter a singer from the list below to see what song she sings lead on.</label><br>
+               <input type="text" name="singers">
                <br><br>
                <input type="submit" value="search">                             
             </form> 
