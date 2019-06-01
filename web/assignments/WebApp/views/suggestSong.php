@@ -42,17 +42,14 @@ $artist = htmlspecialchars($_POST['artist']);
             <form method="post" action="formphp.php">
 
                <label for="song_title">Song Title&nbsp;&nbsp;</label>
-               <input type="text" name="song_title">&nbsp;&nbsp;<br><br>
+               <input type="text" name="song_title">&nbsp;&nbsp;
 
                <label for="artist">Artist&nbsp;&nbsp;</label>
-               <input type="text" name="artist">&nbsp;&nbsp;<br><br>
-
-               <label for="song_info">Song Info</label>
-               <textarea rows="3" cols="26" name="song_info"></textarea>&nbsp;&nbsp;<br><br>               
+               <input type="text" name="artist">&nbsp;&nbsp;
 
                <input type="submit" value="Add Song"><br><br><br>
             </form>
-
+          
          </div>         
 
 
