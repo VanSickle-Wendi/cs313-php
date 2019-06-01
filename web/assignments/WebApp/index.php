@@ -37,7 +37,6 @@ $db = get_db();
                <thead>
                   <tr>
                      <th>Title</th>
-                     <th>Get Song Info</th>
                   </tr>
                </thead>
                <tbody>
