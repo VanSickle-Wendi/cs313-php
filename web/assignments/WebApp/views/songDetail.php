@@ -74,7 +74,6 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
-                  $sort = "";
                   ?>
                   
                   <?php
@@ -91,7 +90,6 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
-                  $sort = "";                  
                   ?>
                   
                   <?php
@@ -108,7 +106,6 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
-                  $sort = "";                  
                   ?>
                   
                   <?php
@@ -125,11 +122,13 @@ $db = get_db();
                      echo "<tr><td>$title</td><td>$tempo</td><td>$genre</td><td>$background</td></tr>";
                   }
                   }
-                  $sort = "";                  
                   ?>                  
 
                </tbody>
             </table>
+            <?php
+            $sort = "";
+            ?>
          </div>
 
          <footer class="footer">
