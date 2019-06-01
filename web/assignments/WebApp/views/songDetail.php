@@ -57,10 +57,13 @@ $db = get_db();
                      echo "<th>Title*</th><th>Tempo</th><th>Genre</th><th>Background</th>";
                      }elseif(isset($sort) && $sort==="tempo") {
                      echo "<th>Title</th><th>Tempo*</th><th>Genre</th><th>Background</th>";
-                     }if(isset($sort) && $sort==="genre") {
+                     }elseif(isset($sort) && $sort==="genre") {
                      echo "<th>Title</th><th>Tempo</th><th>Genre*</th><th>Background</th>";
-                     if(isset($sort) && $sort==="background") {
+                     }if(isset($sort) && $sort==="background") {
                      echo "<th>Title</th><th>Tempo</th><th>Genre</th><th>Background*</th>";
+                     }else {
+                     echo "<th>Title</th><th>Tempo</th><th>Genre</th><th>Background</th>";
+                     }
                      ?>
                   </tr>
                </thead>
