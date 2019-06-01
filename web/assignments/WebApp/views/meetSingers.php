@@ -48,7 +48,7 @@ $db = get_db();
                   <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
                   <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
 
-                  <input type="submit" value="Submit"></p>
+                  <input type="submit" value="Submit"></p><br><br>
             </form>       
       
 
