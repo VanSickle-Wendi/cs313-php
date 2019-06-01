@@ -35,11 +35,11 @@ $db = get_db();
          </div>
          <div>
             <form action="/action_page.php">
-               <p>Sort by:</p>
-               <input type="radio" name="tempo" value="male"> Tempo<br>
-               <input type="radio" name="genre" value="female"> Genre<br>
+               <p>Sort by: &nbsp; &nbsp;
+               <input type="radio" name="tempo" value="male"> Tempo &nbsp; &nbsp;
+               <input type="radio" name="genre" value="female"> Genre &nbsp; &nbsp;
 
-               <input type="submit" value="Submit">
+               <input type="submit" value="Submit"></p>
             </form>
          </div>
          <div class="row">
