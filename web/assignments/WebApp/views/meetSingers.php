@@ -43,14 +43,14 @@ $db = get_db();
 
          <div>
             <?php
-            $sort = $_POST["sort"];
+            $songs = $_POST["songs"];
             ?>
             <form method="post" action="meetSingers.php">
                <p>Sort by: &nbsp; &nbsp;
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "title") echo "checked"; ?>value="title"> Title &nbsp; &nbsp;            
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "tempo") echo "checked"; ?>value="tempo"> Tempo &nbsp; &nbsp;
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "genre") echo "checked"; ?>value="genre"> Genre &nbsp; &nbsp;            
-                  <input type="radio" name="sort" <?php if (isset($sort) && $sort == "background") echo "checked"; ?>value="background"> Background &nbsp; &nbsp;                  
+                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "all") echo "checked"; ?>value="all"> All &nbsp; &nbsp;            
+                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "beverly") echo "checked"; ?>value="beverly"> Beverly &nbsp; &nbsp;
+                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "shannon") echo "checked"; ?>value="shannon"> Shannon &nbsp; &nbsp;            
+                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "wendi") echo "checked"; ?>value="wendi"> Wendi &nbsp; &nbsp;                  
 
                   <input type="submit" value="Submit"></p>
             </form>       
@@ -64,7 +64,7 @@ $db = get_db();
                   </thead>
                   <tbody>
                      <?php
-                     //Get performances
+                     //Get singer 
                      $stmt = $db->prepare('SELECT singer_name FROM singer ORDER BY singer_name');
                      $stmt->execute();
                      $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
