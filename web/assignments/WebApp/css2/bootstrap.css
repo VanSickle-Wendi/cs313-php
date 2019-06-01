@@ -3113,7 +3113,7 @@ fieldset[disabled] .btn-default.focus {
   color: #fff;
   background-color: #333;
 }
-.btn-.nav {
+.btn-primary {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -3983,7 +3983,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 6px 8px;
+  padding: 10px 15px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
