@@ -34,6 +34,15 @@ CREATE TABLE performance (
    booked BOOLEAN NOT NULL
 );
 
+CREATE TABLE songSuggest (
+   id SERIAL PRIMARY KEY,
+   song_title VARCHAR(50) NOT NULL,
+   artist VARCHAR(50) NOT NULL   
+);
+
+INSERT INTO songSuggest (song_title, artist)
+   VALUES ('Let It Be Me', 'The Everly Brothers');
+
 SELECT * FROM performance AS p JOIN venue AS v ON p.venue_id = v.id;
 
 INSERT INTO venue (venue_name)
