@@ -37,7 +37,7 @@ $db = get_db();
             <?php
             $sort = $_POST["sort"];
             ?>
-            <form method="post" action="/action_page.php">
+            <form method="post" action="songDetail.php">
                <p>Sort by: &nbsp; &nbsp;
                   <input type="radio" name="sort" <?php if (isset($sort) && $sort=="tempo") echo "checked";?>value="tempo"> Tempo &nbsp; &nbsp;            
                   <input type="radio" name="sort" <?php if (isset($sort) && $sort=="genre") echo "checked";?>value="genre"> Genre &nbsp; &nbsp;
