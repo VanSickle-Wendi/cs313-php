@@ -44,7 +44,9 @@ $db = get_db();
 
                   <input type="submit" value="Submit"></p>
             </form>
+            <?php
             echo $sort;
+            ?>
          </div>
          <div class="row">
             <table class="table table-striped table-condensed">
