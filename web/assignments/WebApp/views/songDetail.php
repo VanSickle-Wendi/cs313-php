@@ -65,6 +65,7 @@ $db = get_db();
                         echo "<th>Title</th><th>Tempo</th><th>Genre</th><th>Background</th>";
                      }
                      ?>
+                     
                   </tr>
                </thead>
                <tbody>
