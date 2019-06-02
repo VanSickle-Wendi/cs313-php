@@ -1,7 +1,8 @@
 <?php
 require "../db/database.php";
 $db = get_db();
-//include('database.php');
+// Start Session
+session_start();
 
 $song_title = htmlspecialchars($_POST['song_title']);
 $artist = htmlspecialchars($_POST['artist']);
@@ -41,10 +42,10 @@ $artist = htmlspecialchars($_POST['artist']);
             <form method="post" action="formphp.php">
 
                <label for="song_title">Song Title&nbsp;&nbsp;</label>
-               <input type="text" name="song_title">&nbsp;&nbsp;
+               <input type="text" name="song_title" required>&nbsp;&nbsp;
 
                <label for="artist">Artist&nbsp;&nbsp;</label>
-               <input type="text" name="artist">&nbsp;&nbsp;
+               <input type="text" name="artist" required>&nbsp;&nbsp;
 
                <input type="submit" value="Add Song"><br><br><br>
             </form>

@@ -1,7 +1,8 @@
 <?php
 require "../db/database.php";
 $db = get_db();
-//include('database.php');
+// Start Session
+session_start();
 
 $song_title = htmlspecialchars($_POST['song_title']);
 $artist = htmlspecialchars($_POST['artist']);
