@@ -57,6 +57,7 @@ $artist = htmlspecialchars($_POST['artist']);
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
+                     <th>Song ID</th>
                      <th>Title</th>
                      <th>Artist</th>                    
                   </tr>
@@ -72,7 +73,7 @@ $artist = htmlspecialchars($_POST['artist']);
                      $title = $row['song_title'];
                      $artist = $row['artist'];
 
-                     echo "<tr><td>Song ID</td><td>$title</td><td>$artist</td></tr>";
+                     echo "<tr><td>$id</td><td>$title</td><td>$artist</td></tr>";
                   }
                   ?>
 
