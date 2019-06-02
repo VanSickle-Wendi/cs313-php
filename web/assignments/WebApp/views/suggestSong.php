@@ -59,7 +59,8 @@ $artist = htmlspecialchars($_POST['artist']);
                   <tr>
                      <th>Song ID</th>
                      <th>Title</th>
-                     <th>Artist</th>                    
+                     <th>Artist</th>
+                     <th>Action</th>
                   </tr>
                </thead>
                <tbody>
