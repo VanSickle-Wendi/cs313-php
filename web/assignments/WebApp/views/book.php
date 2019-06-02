@@ -84,7 +84,7 @@ $time = htmlspecialchars($_POST['time']);
                      $booked = $row['booked'];
 
                      echo "<tr>";
-                     echo "<td>$id</td><td>$date</td><td>$time</td><td>$venue</td><td>$time</td>$booked</tr>";
+                     echo "<td>$id</td><td>$date</td><td>$time</td><td>$venue</td><td>$booked</td></tr>";
                }
                ?>
 
