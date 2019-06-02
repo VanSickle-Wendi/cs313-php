@@ -73,7 +73,12 @@ $artist = htmlspecialchars($_POST['artist']);
                      $title = $row['song_title'];
                      $artist = $row['artist'];
 
-                     echo "<tr><td>$id</td><td>$title</td><td>$artist</td></tr>";
+                     echo "<tr><td>$id</td>";
+                     echo "<td>$title</td>";
+                     echo "<td>$artist</td>";
+                  ?> <td><a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger-xs">Delete</a></td> 
+                 </tr>
+                 <?php
                   }
                   ?>
 
