@@ -42,13 +42,16 @@ $time = htmlspecialchars($_POST['time']);
             <form method="post" action="book.php">
 
                <label for="date">Date mm/dd/yyyy&nbsp;&nbsp;</label>
-               <input type="text" name="date" required>&nbsp;&nbsp;
+               <input type="date" name="date" required>&nbsp;&nbsp;
 
                <label for="time">Time 00:00&nbsp;&nbsp;</label>
                <input type="time" name="time" required>&nbsp;&nbsp;
                
                <label for="venue">Venue&nbsp;&nbsp;</label>
-               <input type="time" name="venue" required>&nbsp;&nbsp;               
+               <input type="number" name="venue" required>&nbsp;&nbsp;  
+               
+               <label for="booked">Venue&nbsp;&nbsp;</label>
+               <input type="text" name="booked" required>&nbsp;&nbsp;                 
 
                <input type="submit" value="Book Singers"><br><br><br>
             </form>
@@ -81,7 +84,7 @@ $time = htmlspecialchars($_POST['time']);
                      $booked = $row['booked'];
 
                      echo "<tr>";
-                     echo "<td>$id</td><td>$date</td><td>$time</td></tr>";
+                     echo "<td>$id</td><td>$date</td><td>$time</td><td>$venue</td><td>$time</td>$booked</tr>";
                }
                ?>
 
