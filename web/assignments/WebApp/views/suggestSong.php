@@ -65,9 +65,10 @@ $artist = htmlspecialchars($_POST['artist']);
 
                   <?php
                   //Get Songs
-                  $statement = $db->prepare("SELECT song_title, artist FROM songsuggest");
+                  $statement = $db->prepare("SELECT id, song_title, artist FROM songsuggest");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $id = $row['id'];
                      $title = $row['song_title'];
                      $artist = $row['artist'];
 
