@@ -77,7 +77,7 @@ $artist = htmlspecialchars($_POST['artist']);
                      echo "<tr>";
                      echo "<td>$id</td><td>$title</td><td>$artist</td>";
                      ?>
-                  <td><a href="delete.php?id=<?php echo $row['id']; ?>"  class="btn btn-danger-xs">Delete</a></td>
+                  <td><a href="delete.php?id=<?php echo $row['id']; ?>"  class="btn btn-danger btn-xs">Delete</a></td>
                   <?php
                   echo "</tr>";
                }
