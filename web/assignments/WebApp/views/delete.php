@@ -8,7 +8,9 @@ session_start();
 $id = filter_var($_GET['id']);
 print_r($id);
 
-$query = "DELETE FROM songsuggest WHERE id = " . $id;
+//$query = "DELETE FROM songsuggest WHERE id = " . $id;
+$stmt = $db->prepare('DELETE FROM songsuggest WHERE id = ' . $id);
+$stmt->execute();
 
 header("Location: suggestSong.php");
 ?>
