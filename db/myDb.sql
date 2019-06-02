@@ -40,6 +40,7 @@ CREATE TABLE songSuggest (
    artist VARCHAR(50) NOT NULL   
 );
 
+
 INSERT INTO songSuggest (song_title, artist)
    VALUES ('Let It Be Me', 'The Everly Brothers');
 

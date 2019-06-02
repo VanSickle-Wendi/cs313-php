@@ -33,7 +33,7 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">The Singers</h3>
             <hr>
-            
+
             <p>Choose a singer to see what songs she sings lead on.</p> 
             <p>"All" means the song is full 3 part harmony or shared solos.</p>
          </div>
@@ -51,51 +51,51 @@ $db = get_db();
 
                   <input type="submit" value="Submit"></p><br><br>
             </form>       
-      
+         </div>
 
-            <div class="row">
-               <table class="table table-striped table-condensed">
-                  <thead>
-                     <tr>
-                        <th>Singer</th>
-                        <th>Title</th>
-                        <th>Tempo</th>
-                        <th>Genre</th>
-                        <th>Background</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <?php
-                     //Get Songs
-                     $songs = $_POST['songs'];
-                     $stmt = $db->prepare('SELECT * FROM song JOIN singer ON song.lead_singer = singer.id WHERE singer_name=:id ORDER BY title');
-                     $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
-                     $stmt->execute();
-                     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                     foreach ($rows as $r) {
-                        echo '<tr>';
-                        echo '<td>' . $r['singer_name'] . '</td>';
-                        echo '<td>' . $r['title'] . '</td>';
-                        echo '<td>' . $r['tempo'] . '</td>';
-                        echo '<td>' . $r['genre'] . '</td>';
-                        echo '<td>' . $r['background'] . '</td>';
-                        echo '</tr>';
-                     }
-                     ?>
+         <div class="row">
+            <table class="table table-striped table-condensed">
+               <thead>
+                  <tr>
+                     <th>Singer</th>
+                     <th>Title</th>
+                     <th>Tempo</th>
+                     <th>Genre</th>
+                     <th>Background</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <?php
+                  //Get Songs
+                  $songs = $_POST['songs'];
+                  $stmt = $db->prepare('SELECT * FROM song JOIN singer ON song.lead_singer = singer.id WHERE singer_name=:id ORDER BY title');
+                  $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
+                  $stmt->execute();
+                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($rows as $r) {
+                     echo '<tr>';
+                     echo '<td>' . $r['singer_name'] . '</td>';
+                     echo '<td>' . $r['title'] . '</td>';
+                     echo '<td>' . $r['tempo'] . '</td>';
+                     echo '<td>' . $r['genre'] . '</td>';
+                     echo '<td>' . $r['background'] . '</td>';
+                     echo '</tr>';
+                  }
+                  ?>
 
-                  </tbody>
-               </table>
-            </div>
+               </tbody>
+            </table>
+         </div>
 
-            <footer class="footer">
-               <p>&copy; 2019.</p>
-            </footer>
+         <footer class="footer">
+            <p>&copy; 2019.</p>
+         </footer>
 
-         </div> <!-- /container -->
+      </div> <!-- /container -->
 
 
-         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-         <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
    </body>
 </html>
 
