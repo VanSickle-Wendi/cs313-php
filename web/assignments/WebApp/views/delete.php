@@ -5,8 +5,8 @@ $db = get_db();
 session_start();
 
 //Get ID from URL
-$id = filter_var($_GET['id'],FILTER_VALIDATE_INT);
-
+$id = filter_var($_GET['id']);
+print_r($id);
 $stmt = $db->prepare('DELETE FROM songsuggest WHERE id = $id;');
 $stmt->execute();
 
