@@ -50,7 +50,7 @@ $time = htmlspecialchars($_POST['time']);
                <label for="venue">Venue&nbsp;&nbsp;</label>
                <input type="number" name="venue" required>&nbsp;&nbsp;  
                
-               <label for="booked">Venue&nbsp;&nbsp;</label>
+               <label for="booked">Booked&nbsp;&nbsp;</label>
                <input type="text" name="booked" required>&nbsp;&nbsp;                 
 
                <input type="submit" value="Book Singers"><br><br><br>
