@@ -33,7 +33,7 @@ This is the registration page.
             }
             ?>
             
-            <form method="post" action="/acme/accounts/index.php">
+            <form method="post" action="php.php">
                   <label for="username">Username</label>
                   <input type="text" name="username" id="username" <?php if(isset($username)){echo "value='$username'";} ?> required>
                   <label for="password" id="password">Password</label>
