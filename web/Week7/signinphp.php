@@ -30,4 +30,6 @@ $db = get_db();
          $message = '<p class="notice">Please check your password and try again.</p>';
          include 'welcome.php';
          exit;
+      }else {
+         echo 'Wow!';
       }
