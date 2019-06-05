@@ -20,4 +20,4 @@ if (!$hashCheck) {
    exit;
 }
 
-header('Location: signin.php');
+header('Location: welcome.php');
