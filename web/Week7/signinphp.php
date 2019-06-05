@@ -7,6 +7,8 @@ include 'regphp.php';
 // Filter and store the data
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+echo $username;
+echo $password;
 
 
 // Compare the password just submitted against
