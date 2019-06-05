@@ -37,11 +37,9 @@ This is the registration page.
                   <label for="username">Username</label>
                   <input type="text" name="username" id="username" <?php if(isset($username)){echo "value='$username'";} ?> required>
                   <label for="password" id="password">Password</label>
-                  <span class="pFormRules">Passwords must be at least 7 characters and contain at least 1 number.</span>
+                  <span>Passwords must be at least 7 characters and contain at least 1 number.</span>
                   <input type="password" name="password" id="password" required pattern="(?=.*\d).{7,}$">     
                   <button  class="button" type="submit">Register</button>
-                  <!-- Add the action name - value pair -->
-                  <input type="hidden" name="action" value="register">
             </form>
            
          </main>
