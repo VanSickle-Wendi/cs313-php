@@ -19,5 +19,5 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $hashed_password = $row['password'];
 echo $hashed_password;
 
-
+echo $password;
 
