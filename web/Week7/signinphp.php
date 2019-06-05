@@ -8,16 +8,26 @@ include 'regphp.php';
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
-// Get client data based on an email address
+$password = checkPassword($password);
+
+function checkPassword($password){
 $db = get_db();
-$sql = 'SELECT username, password FROM users WHERE username = :username';
-$stmt = $db->prepare($sql);
-$stmt->bindValue(':username', $username, PDO::PARAM_STR);
-$stmt->bindValue(':password', $hashed_password, PDO::PARAM_STR);
-$stmt->execute();
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
-$hashed_password = $row['password'];
-echo $hashed_password;
+   $sql = 'SELECT username, password FROM users WHERE password = :password';
+   $stmt = $db->prepare($sql);
+   $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+   $stmt->execute();
+   $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+   $stmt->closeCursor();
+   return $clientData;
+}
 
-echo $password;
-
+      // Compare the password just submitted against
+      // the hashed password for the matching client
+      $hashCheck = password_verify($clientPassword, $clientData['password']);
+      // If the hashes don't match create an error
+      // and return to the login view
+      if (!$hashCheck) {
+         $message = '<p class="notice">Please check your password and try again.</p>';
+         include 'welcome.php';
+         exit;
+      }
