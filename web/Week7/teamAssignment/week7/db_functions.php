@@ -1,4 +1,4 @@
-<?
+<?php
     function add_user($username, $password){
         global $db;
         $password_hash = password_hash($password, PASSWORD_DEFAULT);

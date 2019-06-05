@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include("db_connect.php");
 $db = get_db();
