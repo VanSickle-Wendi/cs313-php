@@ -1,10 +1,5 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- * Author:  Wendi
- * Created: Jun 4, 2019
- */
-
+CREATE TABLE users (
+   id SERIAL PRIMARY KEY,
+   username VARCHAR(80) NOT NULL,
+   password VARCHAR(80) NOT NULL
+);
