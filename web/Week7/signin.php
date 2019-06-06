@@ -72,9 +72,9 @@ This is the signin page.
 
             <form method="post" action="signin.php">
                <label for="username">Username</label>
-               <input type="text" name="username" id="username" required>
+               <input type="text" name="username" id="username" required><br><br>
+               <span>Passwords must be at least 7 characters and contain at least 1 number.</span><br><br>
                <label for="password" id="password">Password</label>
-               <span>Passwords must be at least 7 characters and contain at least 1 number.</span>
                <input type="password" name="password" id="password" required pattern="(?=.*\d).{7,}$">     
                <button  class="button" type="submit">Sign In</button>
                <h2>Not registered?</h2>
