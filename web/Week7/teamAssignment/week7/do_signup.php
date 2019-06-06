@@ -28,7 +28,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 //    header("Location: signin.php");
 //    die();
 //} else {
-//    $_SESSION['alert'] = "<div class='alert alert-warning'>Your passwo did not match.</div>";
+//    $_SESSION['alert'] = "<div class='alert alert-warning'>Your passwords did not match.</div>";
 //    $_SESSION['password_error'] = true;
 //    header("Location: signup.php");
 //    die();
