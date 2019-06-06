@@ -11,14 +11,14 @@ $confirmpassword = filter_var($_POST['confirmpassword'], FILTER_SANITIZE_STRING)
 
 
 //$pattern = '/^(?=.*[[:digit:]])(?=.*[[:punct:]])[[:print:]]{8,}$/';
-$pattern = '/^(?=.*[[:digit:]]){7,}$/';
-
-
-if(!preg_match($pattern, $password)){
-    $_SESSION['alert'] = "<div class='alert alert-success'>You must match the pattern.</div>";
-    header("Location: signup.php");
-    die();
-} 
+//$pattern = '/^(?=.*[[:digit:]]){7,}$/';
+//
+//
+//if(!preg_match($pattern, $password)){
+//    $_SESSION['alert'] = "<div class='alert alert-success'>You must match the pattern.</div>";
+//    header("Location: signup.php");
+//    die();
+//} 
 
 
 if($password == $confirmpassword){

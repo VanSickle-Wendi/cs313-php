@@ -1,5 +1,6 @@
 <?php
 function get_db(){
+    $db = null;
     
     try
     {
