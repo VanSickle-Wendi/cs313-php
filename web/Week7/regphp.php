@@ -1,6 +1,4 @@
 <?php
-// Create or access a Session
-session_start();
 
 require 'dbConnect.php';
 
@@ -8,6 +6,12 @@ require 'dbConnect.php';
 // Filter and store the data
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+   if (!isset($username) || $password == "" 
+           || !isset($password) || $password == "") {
+           
+           header("Location: register.php");
+           die();
+   }
 
 // Hash the password
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -26,3 +30,5 @@ $stmt->bindValue(':hashed_password', $hashed_password, PDO::PARAM_STR);
 // Insert the data
 $stmt->execute();
 header('Location: signin.php');
+die();
+?>

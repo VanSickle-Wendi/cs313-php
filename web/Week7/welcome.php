@@ -2,16 +2,15 @@
 
 // Create or access a Session
 session_start();
-
-// Get the database connection file
-require 'dbConnect.php';
-$db = get_db();
+if (isset($_SESSION['username'])) {
+   $username = $_SESSION['username'];
+}else {
+   header("Location: signin.php");
+   die();
+}
 ?>
-
 <!DOCTYPE html>
-<!--
-This is the registration page.
--->
+
 <html lang="en-us">
    <head>
       <meta charset="UTF-8">
@@ -25,15 +24,10 @@ This is the registration page.
          <header>
          </header>
          <main>
-            <h1>Welcome</h1>
+            <h1>Welcome <?= $username ?></h1>
             
-            <?php
-            if (isset($message)) {
-               echo $message;
-            }
-            ?>
-            
-Hi there!
+            <a href="signout.php">Sign Out</a>
+
            
          </main>
          </footer>
