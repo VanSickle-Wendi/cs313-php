@@ -17,7 +17,7 @@ include("db_functions.php");
             <div class="col-md-6 offset-md-3">
                 <h1>Sign In!</h1>
                 
-                <? 
+                <?php
                 if(isset($_SESSION['alert'])){
                     echo $_SESSION['alert'];
                     unset($_SESSION['alert']);
