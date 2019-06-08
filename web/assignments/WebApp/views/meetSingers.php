@@ -55,7 +55,7 @@ $db = get_db();
 
          <div>
             <?php
-            $songs = $info;
+            $songs = $_POST["songs"];
             ?>
             <form method="post" action="meetSingers.php">
                <p>Sort by: &nbsp; &nbsp;
