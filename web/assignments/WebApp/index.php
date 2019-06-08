@@ -30,6 +30,7 @@ $db = get_db();
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
+                     <th>Song Number</th>
                      <th>Title</th>
                   </tr>
                </thead>
@@ -39,8 +40,9 @@ $db = get_db();
                   $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY title");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $id = $row['id'];
                      $title = $row['title'];
-                     echo "<tr><td>$title</td></tr>";
+                     echo "<tr><td>$id</td><td>$title</td></tr>";
                   }
                   ?>
 
