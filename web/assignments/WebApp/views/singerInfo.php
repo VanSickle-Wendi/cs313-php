@@ -50,9 +50,9 @@ $db = get_db();
                   <?php
                   //Get Info
                   $info = $_POST['info'];
-                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer');          
+                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer WHERE singer_name =' . $info .');          
                   $stmt->execute();
-                  $rows = $stmt->fetch(PDO::FETCH_ASSOC);
+                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
                      echo '<tr>';
                      echo '<td>' . $r['singer_name'] . '</td>';
