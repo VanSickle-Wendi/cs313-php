@@ -27,7 +27,7 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">Performances</h3>
             <form method="post" action="currentBookings.php">
-               <input type="text" name="perform">&nbsp;&nbsp;<p>Enter a venue from the list below.</P>&nbsp;&nbsp;<input type="submit" value="search">
+               <input type="text" name="perform">&nbsp;&nbsp;Enter a venue from the list below.&nbsp;&nbsp;<input type="submit" value="search">
 
                
                <br><br>
