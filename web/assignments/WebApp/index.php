@@ -22,15 +22,7 @@ $db = get_db();
       <div class="container">
          <div class="header clearfix">
             <nav>
-               <ul class="nav nav-pills pull-right">
-                  <li class="btn btn-primary btn-xs"><a href="index.php">View List</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="views/songDetail.php">Song Details</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="views/meetSingers.php">The Singers</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="views/currentBookings.php">Performances</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="views/suggestSong.php">Suggest a Song</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="views/currentBookings.php">Performances</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="views/suggestSong.php">Suggest a Song</a></li>                   
-               </ul><br><br><br>
+               <?php include $_SERVER['DOCUMENT_ROOT'] . '/web/assignments/common/nav.php'; ?>
             </nav>
             <h3 class="text-muted">Mom and Double Image</h3>
          </div>
@@ -48,10 +40,10 @@ $db = get_db();
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $title = $row['title'];
-                     echo "<tr><td>$title</td></tr>";                     
+                     echo "<tr><td>$title</td></tr>";
                   }
                   ?>
-                 
+
                </tbody>
             </table>
          </div>
