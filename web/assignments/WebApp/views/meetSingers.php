@@ -34,15 +34,15 @@ $db = get_db();
             <h3 class="text-muted">The Singers</h3>
             <hr>
 
-            <p>Choose a singer to see what songs she sings lead on.</p> 
-            <p>"All" means the song is full 3 part harmony or shared solos.</p>
+            <p>Choose a singer to see what part she sings and what experience she has.</p> 
+
          </div>
          
          <div>
             <?php
             $info = $_POST["info"];
             ?>
-            <form method="post" action="meetSingers.php">
+            <form method="post" action="singerInfo.php">
                <p>Sort by: &nbsp; &nbsp;
                   <input type="radio" name="info" <?php if (isset($info) && $info == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
                   <input type="radio" name="info" <?php if (isset($info) && $info == "Beverly") echo "checked"; ?>value="Beverly"> Beverly &nbsp; &nbsp;
@@ -53,51 +53,9 @@ $db = get_db();
             </form>       
          </div>        
 
-         <div>
-            <?php
-            $songs = $_POST["songs"];
-            ?>
-            <form method="post" action="meetSingers.php">
-               <p>Sort by: &nbsp; &nbsp;
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Beverly") echo "checked"; ?>value="Beverly"> Beverly &nbsp; &nbsp;
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
-
-                  <input type="submit" value="Submit"></p><br><br>
-            </form>       
-         </div>
 
          <div class="row">
             <table class="table table-striped table-condensed">
-               <thead>
-                  <tr>
-                     <th>Singer</th>
-                     <th>Part</th>
-                     <th>Experience</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <?php
-                  //Get Info
-                  $info = $_POST['info'];
-                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer WHERE singer_name=:id');   
-                  $stmt->bindValue(':id', $info, PDO::PARAM_STR);                  
-                  $stmt->execute();
-                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                  foreach ($rows as $r) {
-                     echo '<tr>';
-                     echo '<td>' . $r['singer_name'] . '</td>';
-                     echo '<td>' . $r['part'] . '</td>';
-                     echo '<td>' . $r['experience'] . '</td>';
-                     echo '</tr>';
-                  }
-                  ?>
-
-               </tbody>               
-               
-               
-               
                <thead>
                   <tr>
                      <th>Singer</th>
