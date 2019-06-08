@@ -37,6 +37,51 @@ $db = get_db();
             <p>Choose a singer to see what songs she sings lead on.</p> 
             <p>"All" means the song is full 3 part harmony or shared solos.</p>
          </div>
+         
+         <div>
+            <?php
+            $songs = $_POST["info"];
+            ?>
+            <form method="post" action="meetSingers.php">
+               <p>Sort by: &nbsp; &nbsp;
+                  <input type="radio" name="info" <?php if (isset($info) && $info == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
+                  <input type="radio" name="info" <?php if (isset($info) && $info == "Beverly") echo "checked"; ?>value="Beverly"> Beverly &nbsp; &nbsp;
+                  <input type="radio" name="info" <?php if (isset($info) && $info == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
+                  <input type="radio" name="info" <?php if (isset($info) && $info == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
+
+                  <input type="submit" value="Submit"></p><br><br>
+            </form>       
+         </div>
+
+         <div class="row">
+            <table class="table table-striped table-condensed">
+               <thead>
+                  <tr>
+                     <th>Singer</th>
+                     <th>Part</th>
+                     <th>Experience</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <?php
+                  //Get Songs
+                  $songs = $_POST['info'];
+                  $stmt = $db->prepare('SELECT * FROM singer');
+                  $stmt->bindValue(':id', $info, PDO::PARAM_STR);
+                  $stmt->execute();
+                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($rows as $r) {
+                     echo '<tr>';
+                     echo '<td>' . $r['singer_name'] . '</td>';
+                     echo '<td>' . $r['part'] . '</td>';
+                     echo '<td>' . $r['experience'] . '</td>';
+                     echo '</tr>';
+                  }
+                  ?>
+
+               </tbody>
+            </table>
+         </div>         
 
          <div>
             <?php
