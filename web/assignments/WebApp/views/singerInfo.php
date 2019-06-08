@@ -50,10 +50,7 @@ $db = get_db();
                   <?php
                   //Get Info
                   $info = $_POST['info'];
-                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer WHERE singer_name = :singer_name, part = :part, experience = :experience');
-                  $stmt->bindValue(':id', $info, PDO::PARAM_STR);
-                  $stmt->bindValue(':id', $info, PDO::PARAM_STR);
-                  $stmt->bindValue(':id', $info, PDO::PARAM_STR);                  
+                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer');          
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
