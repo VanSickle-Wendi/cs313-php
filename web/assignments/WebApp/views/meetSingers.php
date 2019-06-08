@@ -39,7 +39,9 @@ $db = get_db();
          </div>
          
          <div>
-
+            <?php
+            $info = $_POST["info"];
+            ?>
             <form method="post" action="singerInfo.php">
                <p>Sort by: &nbsp; &nbsp;
                   <input type="radio" name="info" <?php if (isset($info) && $info == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
