@@ -23,7 +23,7 @@ $db = get_db();
       <div class="container">
          <div class="header clearfix">
             <nav>
-               <?php include $_SERVER['DOCUMENT_ROOT'] . 'web/assignments/WebApp/common/nav.php'; ?>
+               <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/nav.php'; ?>
             </nav>
             <h3 class="text-muted">Performances</h3>
             <form method="post" action="currentBookings.php">
