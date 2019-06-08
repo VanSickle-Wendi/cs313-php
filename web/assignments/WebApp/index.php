@@ -31,7 +31,7 @@ $db = get_db();
                <thead>
                   <tr>
                      <th class=tCenter class="col-sm-1">Song Number</th>
-                     <th class="col-sm-4">Title</th>
+                     <th class="col-sm-3">Title</th>
                   </tr>
                </thead>
                <tbody>
