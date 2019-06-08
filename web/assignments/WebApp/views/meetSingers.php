@@ -100,6 +100,35 @@ $db = get_db();
 
          <div class="row">
             <table class="table table-striped table-condensed">
+               
+               <thead>
+                  <tr>
+                     <th>Singer</th>
+                     <th>Part</th>
+                     <th>Experience</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <?php
+                  //Get Info
+                  $songs = $_POST['songs'];
+                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer WHERE singer.id = :id');
+                  $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
+                  $stmt->execute();
+                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($rows as $r) {
+                     echo '<tr>';
+                     echo '<td>' . $r['singer_name'] . '</td>';
+                     echo '<td>' . $r['part'] . '</td>';
+                     echo '<td>' . $r['experience'] . '</td>';
+                     echo '</tr>';
+                  }
+                  ?>
+
+               </tbody>               
+               
+                             
+               
                <thead>
                   <tr>
                      <th>Singer</th>
