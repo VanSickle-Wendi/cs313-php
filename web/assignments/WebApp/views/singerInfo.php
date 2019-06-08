@@ -33,7 +33,7 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">The Singers</h3>
             <hr>
-            <p>Choose a singer to see what part she sings and what experience she has.</p> 
+            <p>Choose a singer to see what part she sings, her favorite song, and what experience she has.</p> 
          </div>
 
          <div>
@@ -57,6 +57,7 @@ $db = get_db();
                   <tr>
                      <th>Singer</th>
                      <th>Part</th>
+                     <th>Favorite Song</th>
                      <th>Experience</th>
                   </tr>
                </thead>
@@ -64,7 +65,7 @@ $db = get_db();
                   <?php
                   //Get Info
                   $info = $_POST['info'];
-                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer WHERE singer_name=:id');   
+                  $stmt = $db->prepare('SELECT singer_name, part, fav_song, experience FROM singer WHERE singer_name=:id');   
                   $stmt->bindValue(':id', $info, PDO::PARAM_STR);                  
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -72,6 +73,7 @@ $db = get_db();
                      echo '<tr>';
                      echo '<td>' . $r['singer_name'] . '</td>';
                      echo '<td>' . $r['part'] . '</td>';
+                     echo '<td>' . $r['fav_song'] . '</td>';                     
                      echo '<td>' . $r['experience'] . '</td>';
                      echo '</tr>';
                   }
