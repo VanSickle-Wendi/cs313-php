@@ -7,6 +7,7 @@ CREATE TABLE singer (
    id SERIAL PRIMARY KEY,
    singer_name VARCHAR(50) NOT NULL UNIQUE,
    part PART_TYPE NOT NULL,
+   fav_song VARCHAR(50) NOT NULL,
    experience TEXT NOT NULL
 );
 
@@ -148,13 +149,13 @@ INSERT INTO song(title, tempo, genre, background, lead_singer)
             ('You Never Can Tell', 'fast', '60s', 'karaoke', 4);
 
 
-INSERT INTO singer(singer_name, part, experience)
-     VALUES ('Beverly', 'second_alto', 'Beverly grew up singing with her twin sister. She sang in a group with several women performing oldies. Beverly taught her twin daughters to sing and performs with them today.'),
-            ('Shannon', 'alto', 'Shannon grew up singing with her twin sister and their mom. She has been singing in a dance band for more than 29 years. Today, she performs most often with her mom and twin sister.'),
-            ('Wendi', 'soprano', 'Wendi grew up singing with her twin sister and their mom. She has been singing in a dance band for more than 29 years. Today, she performs most often with her mom and twin sister. Does this sound familiar?'),
-            ('All', 'all', 'The group currently performs about once per week.');
-
+INSERT INTO singer(singer_name, part, fav_song, experience)
+     VALUES ('Beverly', 'second_alto', 'You Never Can Tell', 'Beverly grew up singing with her twin sister. She sang in a group with several women performing oldies. Beverly taught her twin daughters to sing and performs with them today.'),
+            ('Shannon', 'alto', 'You''re So Fine', 'Shannon grew up singing with her twin sister and their mom. She has been singing in a dance band for more than 29 years. Today, she performs most often with her mom and twin sister.'),
+            ('Wendi', 'soprano', 'No One Needs to Know', 'Wendi grew up singing with her twin sister and their mom. She has been singing in a dance band for more than 29 years. Today, she performs most often with her mom and twin sister. Does this sound familiar?'),
+            ('All', 'all', 'All of them', 'The group currently performs about once per week.');
 
 
 SELECT *
     FROM song LEFT JOIN singer ON song.lead_singer = singer.id;
+
