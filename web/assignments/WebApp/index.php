@@ -22,7 +22,7 @@ $db = get_db();
       <div class="container">
          <div class="header clearfix">
             <nav>
-               <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/nav.php'; ?>
+               <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/navIndex.php'; ?>
             </nav>
             <h3 class="text-muted">Mom and Double Image</h3>
          </div>
