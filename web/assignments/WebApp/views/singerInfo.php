@@ -41,8 +41,7 @@ $db = get_db();
             $info = $_POST["info"];
             ?>
             <form method="post" action="singerInfo.php">
-               <p>Sort by: &nbsp; &nbsp;
-                  <input type="radio" name="info" <?php if (isset($info) && $info == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
+               <p>Sort by: &nbsp; &nbsp;       
                   <input type="radio" name="info" <?php if (isset($info) && $info == "Beverly") echo "checked"; ?>value="Beverly"> Beverly &nbsp; &nbsp;
                   <input type="radio" name="info" <?php if (isset($info) && $info == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
                   <input type="radio" name="info" <?php if (isset($info) && $info == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
