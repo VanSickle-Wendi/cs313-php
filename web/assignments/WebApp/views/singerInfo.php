@@ -55,10 +55,10 @@ $db = get_db();
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
-                     <th>Singer</th>
-                     <th>Part</th>
-                     <th>Favorite Song</th>
-                     <th>Experience</th>
+                     <th class="col-sm-1">Singer</th>
+                     <th class="col-sm-1">Part</th>
+                     <th class="col-sm-1">Favorite Song</th>
+                     <th class="col-sm-3">Experience</th>
                   </tr>
                </thead>
                <tbody>
