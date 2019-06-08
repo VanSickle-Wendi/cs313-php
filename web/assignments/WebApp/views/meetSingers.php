@@ -35,7 +35,7 @@ $db = get_db();
             <hr>
             <p>Choose a singer to see what songs she sings lead on.</p> 
             <p>"All" means the song is full 3 part harmony or shared solos.</p>
-            <li class="btn btn-primary btn-xs"><a href="singersInfo.php">More about the Singers</a></li>
+            <li class="btn btn-primary btn-xs"><a href="singerInfo.php">More about the Singers</a></li>
 
          </div>
 
