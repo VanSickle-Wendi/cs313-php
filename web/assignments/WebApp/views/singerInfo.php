@@ -47,7 +47,7 @@ $db = get_db();
                   <input type="radio" name="info" <?php if (isset($info) && $info == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
                   <input type="radio" name="info" <?php if (isset($info) && $info == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
 
-                  <input type="submit" value="Submit"></p><br><br>
+                  <input type="submit" value="Submit">&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-primary btn-xs"><a href="singerInfo.php">Who sing lead on which songs.</a></button></p><br><br>
             </form>       
          </div>         
 
