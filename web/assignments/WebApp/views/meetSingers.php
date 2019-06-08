@@ -27,7 +27,7 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">The Singers</h3>
             <hr>
-            <p>Choose a singer to see what songs she sings lead on.&nbsp;&nbsp;<button class="btn btn-primary btn-xs"><a href="singerInfo.php">More about the Singers</a></button></p> 
+            <p>Choose a singer to see what songs she sings lead on.&nbsp;&nbsp;</p> 
             <p>"All" means the song is full 3 part harmony or shared solos.</p>
 
          </div>
@@ -43,7 +43,7 @@ $db = get_db();
                   <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
                   <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
 
-                  <input type="submit" value="Submit"></p><br><br>
+                  <input type="submit" value="Submit">&nbsp; &nbsp;<button class="btn btn-primary btn-xs"><a href="singerInfo.php">More about the Singers</a></button></p><br><br>
             </form>       
          </div>
        
