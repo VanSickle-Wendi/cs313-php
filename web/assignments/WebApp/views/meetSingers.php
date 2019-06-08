@@ -61,7 +61,7 @@ $db = get_db();
                      <th>Part</th>
                      <th>Experience</th>
                   </tr>
-               </thead><br><br>
+               </thead>
                <tbody>
                   <?php
                   //Get Songs
@@ -79,35 +79,7 @@ $db = get_db();
                   }
                   ?>
 
-               </tbody><br><br>
-               
-               <thead>
-                  <tr>
-                     <th>Title</th>
-                     <th>Tempo</th>
-                     <th>Genre</th>
-                     <th>Background</th>                     
-                  </tr>
-               </thead>
-               <tbody>
-                  <?php
-                  //Get Songs
-                  $songs = $_POST['songs'];
-                  $stmt = $db->prepare('SELECT * FROM song JOIN singer ON song.lead_singer = singer.id WHERE singer_name=:id ORDER BY title');
-                  $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
-                  $stmt->execute();
-                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                  foreach ($rows as $r) {
-                     echo '<tr>';
-                     echo '<td>' . $r['title'] . '</td>';
-                     echo '<td>' . $r['tempo'] . '</td>';
-                     echo '<td>' . $r['genre'] . '</td>';                     
-                     echo '<td>' . $r['background'] . '</td>';
-                     echo '</tr>';
-                  }
-                  ?>
-
-               </tbody>                            
+               </tbody>
             </table>
          </div>
 
