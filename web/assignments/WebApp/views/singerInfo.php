@@ -23,13 +23,7 @@ $db = get_db();
       <div class="container">
          <div class="header clearfix">
             <nav>
-               <ul class="nav nav-pills pull-right">
-                  <li class="btn btn-primary btn-xs"><a href="../index.php">View List</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="songDetail.php">Song Details</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="meetSingers.php">The Singers</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="currentBookings.php">Performances</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="suggestSong.php">Suggest a Song</a></li>                  
-               </ul>
+               <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/nav.php'; ?>
             </nav>
             <h3 class="text-muted">The Singers</h3>
             <hr>
@@ -46,7 +40,7 @@ $db = get_db();
                   <input type="radio" name="info" <?php if (isset($info) && $info == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
                   <input type="radio" name="info" <?php if (isset($info) && $info == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
 
-                  <input type="submit" value="Submit">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-primary btn-xs"><a href="singerInfo.php">Who sings lead on which songs.</a></button></p><br><br>
+                  <input type="submit" value="Submit">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-primary btn-xs"><a href="meetSingers.php">Who sings lead on which songs.</a></button></p><br><br>
             </form>       
          </div>         
 
