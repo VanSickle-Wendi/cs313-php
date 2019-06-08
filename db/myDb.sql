@@ -1,7 +1,7 @@
 CREATE TYPE TEMPO_TYPE AS ENUM('slow', 'medium', 'fast');
 CREATE TYPE GENRE_TYPE AS ENUM('folk', '40s', '50s', '60s', 'country', 'old country', 'rock', 'religious');
 CREATE TYPE BACKGROUND_TYPE AS ENUM('guitar', 'karaoke');
-CREATE TYPE PART_TYPE AS ENUM('second alto', 'alto', 'soprano', 'all');
+CREATE TYPE PART_TYPE AS ENUM('second-alto', 'alto', 'soprano', 'all');
 
 CREATE TABLE singer (
    id SERIAL PRIMARY KEY,
@@ -149,7 +149,7 @@ INSERT INTO song(title, tempo, genre, background, lead_singer)
 
 
 INSERT INTO singer(singer_name, part, experience)
-     VALUES ('Beverly', 'second alto', 'Beverly grew up singing with her twin sister. She sang in a group with several women performing oldies. Beverly taught her twin daughters to sing and performs with them today.'),
+     VALUES ('Beverly', 'second-alto', 'Beverly grew up singing with her twin sister. She sang in a group with several women performing oldies. Beverly taught her twin daughters to sing and performs with them today.'),
             ('Shannon', 'alto', 'Shannon grew up singing with her twin sister and their mom. She has been singing in a dance band for more than 29 years. Today, she performs most often with her mom and twin sister.'),
             ('Wendi', 'soprano', 'Wendi grew up singing with her twin sister and their mom. She has been singing in a dance band for more than 29 years. Today, she performs most often with her mom and twin sister. Does this sound familiar?'),
             ('All', 'all', 'The group currently performs about once per week.');
