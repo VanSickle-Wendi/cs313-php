@@ -29,7 +29,7 @@ $db = get_db();
                   <li class="btn btn-primary btn-xs"><a href="views/currentBookings.php">Performances</a></li>
                   <li class="btn btn-primary btn-xs"><a href="views/suggestSong.php">Suggest a Song</a></li>                  
                </ul>
-            </nav>
+            </nav><br>
             <h3 class="text-muted">Mom and Double Image</h3>
          </div>
          <div class="row">
