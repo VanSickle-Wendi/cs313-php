@@ -59,9 +59,8 @@ $db = get_db();
                   <tr>
                      <th>Singer</th>
                      <th>Title</th>
-                     <th>Tempo</th>
-                     <th>Genre</th>
-                     <th>Background</th>
+                     <th>Part</th>
+                     <th>Experience</th>
                   </tr>
                </thead>
                <tbody>
@@ -76,9 +75,8 @@ $db = get_db();
                      echo '<tr>';
                      echo '<td>' . $r['singer_name'] . '</td>';
                      echo '<td>' . $r['title'] . '</td>';
-                     echo '<td>' . $r['tempo'] . '</td>';
-                     echo '<td>' . $r['genre'] . '</td>';
-                     echo '<td>' . $r['background'] . '</td>';
+                     echo '<td>' . $r['part'] . '</td>';
+                     echo '<td>' . $r['experience'] . '</td>';
                      echo '</tr>';
                   }
                   ?>

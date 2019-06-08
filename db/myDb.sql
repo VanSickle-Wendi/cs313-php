@@ -149,10 +149,10 @@ INSERT INTO song(title, tempo, genre, background, lead_singer)
 
 
 INSERT INTO singer(singer_name, part, experience)
-     VALUES ('Beverly', 'second alto', 'coming soon'),
-            ('Shannon', 'alto', 'coming soon'),
-            ('Wendi', 'soprano', 'coming soon'),
-            ('All', 'all', 'coming soon');
+     VALUES ('Beverly', 'second alto', 'Beverly grew up singing with her twin sister. She sang in a group with several women performing oldies. Beverly taught her twin daughters to sing and performs with them today.'),
+            ('Shannon', 'alto', 'Shannon grew up singing with her twin sister and their mom. She has been singing in a dance band for more than 29 years. Today, she performs most often with her mom and twin sister.'),
+            ('Wendi', 'soprano', 'Wendi grew up singing with her twin sister and their mom. She has been singing in a dance band for more than 29 years. Today, she performs most often with her mom and twin sister. Does this sound familiar?'),
+            ('All', 'all', 'The group currently performs about once per week.');
 
 
 
