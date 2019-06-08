@@ -37,7 +37,7 @@ $db = get_db();
                <tbody>
                   <?php
                   //Get Songs
-                  $statement = $db->prepare("SELECT title, tempo, genre, background FROM song ORDER BY title");
+                  $statement = $db->prepare("SELECT id, title, tempo, genre, background FROM song ORDER BY title");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $id = $row['id'];
