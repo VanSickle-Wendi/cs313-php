@@ -50,7 +50,7 @@ $db = get_db();
                   <?php
                   //Get Info
                   $info = $_POST['info'];
-                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer WHERE id=:id');   
+                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer WHERE singer_name=:id');   
                   $stmt->bindValue(':id', $info, PDO::PARAM_STR);                  
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
