@@ -27,13 +27,7 @@ $time = htmlspecialchars($_POST['time']);
       <div class="container">
          <div class="header clearfix">
             <nav>
-               <ul class="nav nav-pills pull-right">
-                  <li class="btn btn-primary btn-xs"><a href="../index.php">View List</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="songDetail.php">Song Details</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="meetSingers.php">The Singers</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="currentBookings.php">Performances</a></li>
-                  <li class="btn btn-primary btn-xs"><a href="suggestSong.php">Suggest a Song</a></li>                  
-               </ul>
+               <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/nav.php'; ?>
             </nav>
             <h3 class="text-muted">Book the Singers</h3>
          </div>
