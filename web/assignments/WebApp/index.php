@@ -42,7 +42,7 @@ $db = get_db();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $id = $row['id'];
                      $title = $row['title'];
-                     echo "<tr><td>$id</td><td>$title</td></tr>";
+                     echo "<tr><td class=tCenter>$id</td><td>$title</td></tr>";
                   }
                   ?>
 

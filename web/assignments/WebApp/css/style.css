@@ -12,6 +12,10 @@ a {
   padding: 4px 10px;
 }
 
+#tCenter {
+   text-align: center;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
