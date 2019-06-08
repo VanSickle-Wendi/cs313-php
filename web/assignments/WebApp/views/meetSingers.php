@@ -66,7 +66,7 @@ $db = get_db();
                   <?php
                   //Get Songs
                   $songs = $_POST['songs'];
-                  $stmt = $db->prepare('SELECT * FROM song JOIN singer ON song.lead_singer = singer.id WHERE singer_name=:id ORDER BY title');
+                  $stmt = $db->prepare('SELECT * FROM singer');
                   $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -82,6 +82,40 @@ $db = get_db();
                </tbody>
             </table>
          </div>
+         
+         <div class="row">
+            <table class="table table-striped table-condensed">
+               <thead>
+                  <tr>
+                     <th>Singer</th>
+                     <th>Title</th>
+                     <th>Tempo</th>
+                     <th>Genre</th>
+                     <th>Background</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <?php
+                  //Get Songs
+                  $songs = $_POST['songs'];
+                  $stmt = $db->prepare('SELECT * FROM song JOIN singer ON song.lead_singer = singer.id WHERE singer_name=:id ORDER BY title');
+                  $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
+                  $stmt->execute();
+                  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($rows as $r) {
+                     echo '<tr>';
+                     echo '<td>' . $r['singer_name'] . '</td>';
+                     echo '<td>' . $r['title'] . '</td>';
+                     echo '<td>' . $r['tempo'] . '</td>';
+                     echo '<td>' . $r['gerne'] . '</td>';                     
+                     echo '<td>' . $r['background'] . '</td>';
+                     echo '</tr>';
+                  }
+                  ?>
+
+               </tbody>
+            </table>
+         </div>         
 
          <footer class="footer">
             <p>&copy; 2019.</p>
