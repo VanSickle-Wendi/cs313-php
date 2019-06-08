@@ -43,7 +43,7 @@ $db = get_db();
                   <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
                   <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
 
-                  <input type="submit" value="Submit">&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-primary btn-xs"><a href="singerInfo.php">More details about the Singers</a></button></p><br><br>
+                  <input type="submit" value="Submit">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-primary btn-xs"><a href="singerInfo.php">More details about the Singers</a></button></p><br><br>
             </form>       
          </div>
        
