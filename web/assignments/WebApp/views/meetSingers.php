@@ -40,7 +40,7 @@ $db = get_db();
          
          <div>
             <?php
-            $songs = $_POST["info"];
+            $info = $_POST["info"];
             ?>
             <form method="post" action="meetSingers.php">
                <p>Sort by: &nbsp; &nbsp;
@@ -65,7 +65,7 @@ $db = get_db();
                <tbody>
                   <?php
                   //Get Songs
-                  $songs = $_POST['info'];
+                  $info = $_POST['info'];
                   $stmt = $db->prepare('SELECT * FROM singer');
                   $stmt->bindValue(':id', $info, PDO::PARAM_STR);
                   $stmt->execute();
