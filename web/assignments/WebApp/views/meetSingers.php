@@ -42,7 +42,7 @@ $db = get_db();
             <?php
             $songs = $_POST["songs"];
             ?>
-            <form method="post" action="meetSingers.php">
+            <form method="post" action="singerInfo.php">
                <p>Sort by: &nbsp; &nbsp;
                   <input type="radio" name="songs" <?php if (isset($songs) && $songs == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
                   <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Beverly") echo "checked"; ?>value="Beverly"> Beverly &nbsp; &nbsp;

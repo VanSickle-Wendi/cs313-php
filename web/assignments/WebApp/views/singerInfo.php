@@ -58,34 +58,30 @@ $db = get_db();
                <thead>
                   <tr>
                      <th>Singer</th>
-                     <th>Title</th>
-                     <th>Tempo</th>
-                     <th>Genre</th>
-                     <th>Background</th>
+                     <th>Part</th>
+                     <th>Experience</th>
                   </tr>
                </thead>
                <tbody>
                   <?php
-                  //Get Songs
-                  $songs = $_POST['songs'];
-                  $stmt = $db->prepare('SELECT * FROM song JOIN singer ON song.lead_singer = singer.id WHERE singer_name=:id ORDER BY title');
-                  $stmt->bindValue(':id', $songs, PDO::PARAM_STR);
+                  //Get Info
+                  $info = $_POST['info'];
+                  $stmt = $db->prepare('SELECT singer_name, part, experience FROM singer WHERE singer.id = :id');
+                  $stmt->bindValue(':id', $info, PDO::PARAM_STR);
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
                      echo '<tr>';
                      echo '<td>' . $r['singer_name'] . '</td>';
-                     echo '<td>' . $r['title'] . '</td>';
-                     echo '<td>' . $r['tempo'] . '</td>';
-                     echo '<td>' . $r['genre'] . '</td>';
-                     echo '<td>' . $r['background'] . '</td>';
+                     echo '<td>' . $r['part'] . '</td>';
+                     echo '<td>' . $r['experience'] . '</td>';
                      echo '</tr>';
                   }
                   ?>
 
                </tbody>
             </table>
-         </div>
+         </div> 
 
          <footer class="footer">
             <p>&copy; 2019.</p>
