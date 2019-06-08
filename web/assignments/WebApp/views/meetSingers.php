@@ -64,9 +64,9 @@ $db = get_db();
                </thead>
                <tbody>
                   <?php
-                  //Get Songs
+                  //Get Info
                   $info = $_POST['info'];
-                  $stmt = $db->prepare('SELECT * FROM singer');
+                  $stmt = $db->prepare('SELECT * FROM singer WHERE id = :id');
                   $stmt->bindValue(':id', $info, PDO::PARAM_STR);
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
