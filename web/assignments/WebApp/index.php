@@ -30,7 +30,7 @@ $db = get_db();
             <table class="table table-striped table-condensed">
                <thead>
                   <tr>
-                     <th class="col-sm-3">Song Number</th>
+                     <th class="col-sm-1">Song Number</th>
                      <th class="col-sm-2">Title</th>
                   </tr>
                </thead>
