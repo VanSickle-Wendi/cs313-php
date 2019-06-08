@@ -66,8 +66,7 @@ $db = get_db();
                   <?php
                   //Get Info
                   $info = $_POST['info'];
-                  $stmt = $db->prepare('SELECT * FROM singer WHERE id = :id');
-                  $stmt->bindValue(':id', $info, PDO::PARAM_STR);
+                  $stmt = $db->prepare('SELECT * FROM singer');
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
