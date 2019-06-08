@@ -33,19 +33,19 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">The Singers</h3>
             <hr>
-            <p>Choose a singer to see what songs she sings lead on.</p> 
-            <p>"All" means the song is full 3 part harmony or shared solos.</p>
+            <p>Choose a singer to see what part she sings and what experience she has.</p> 
          </div>
+
          <div>
             <?php
-            $songs = $_POST["songs"];
+            $info = $_POST["info"];
             ?>
-            <form method="post" action="meetSingers.php">
+            <form method="post" action="singerInfo.php">
                <p>Sort by: &nbsp; &nbsp;
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Beverly") echo "checked"; ?>value="Beverly"> Beverly &nbsp; &nbsp;
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
-                  <input type="radio" name="songs" <?php if (isset($songs) && $songs == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
+                  <input type="radio" name="info" <?php if (isset($info) && $info == "All") echo "checked"; ?>value="All"> All &nbsp; &nbsp;            
+                  <input type="radio" name="info" <?php if (isset($info) && $info == "Beverly") echo "checked"; ?>value="Beverly"> Beverly &nbsp; &nbsp;
+                  <input type="radio" name="info" <?php if (isset($info) && $info == "Shannon") echo "checked"; ?>value="Shannon"> Shannon &nbsp; &nbsp;            
+                  <input type="radio" name="info" <?php if (isset($info) && $info == "Wendi") echo "checked"; ?>value="Wendi"> Wendi &nbsp; &nbsp;                  
 
                   <input type="submit" value="Submit"></p><br><br>
             </form>       
