@@ -26,6 +26,24 @@ $db = get_db();
             </nav>
             <h3 class="text-muted">Mom and Double Image</h3>
          </div>
+
+         <div>
+            <form method="post" action="index.php">
+
+               <label for="song_num">Song #&nbsp;&nbsp;</label>
+               <input type="text" name="song_num" required>&nbsp;&nbsp;
+
+               <label for="orig_artist">Original Artist&nbsp;&nbsp;</label>
+               <input type="text" name="orig_artist" required>&nbsp;&nbsp;
+
+               <label for="date">Artist&nbsp;&nbsp;</label>
+               <input type="text" name="date" required>&nbsp;&nbsp;
+
+               <input type="submit" value="Update"><br><br><br>
+            </form>
+
+         </div>         
+
          <div class="row">
             <table class="table table-striped table-condensed">
                <thead>
