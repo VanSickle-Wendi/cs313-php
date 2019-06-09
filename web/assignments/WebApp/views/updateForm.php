@@ -12,7 +12,7 @@ $release_date = htmlspecialchars($_POST['release_date']);
 $stmt = $db->prepare('UPDATE song SET orig_artist=:orig_artist, release_date=:release_date WHERE id=:id);');
 $stmt->bindValue(':id', $song_num, PDO::PARAM_INT);
 $stmt->bindValue(':orig_artist', $orig_artist_title, PDO::PARAM_STR);
-$stmt->bindValue(':release_date', $release_date, PDO::PARAM_STR);
+$stmt->bindValue(':release_date', $release_date, PDO::PARAM_DATE);
 $stmt->execute();
 
 header("Location: ../index.php");
