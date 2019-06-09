@@ -26,6 +26,9 @@ $db = get_db();
                <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/nav.php'; ?>
             </nav>
             <h3 class="text-muted">Performances</h3>
+                        <?php
+            $perform = $_POST["perform"];
+            ?>
             <form method="post" action="currentBookings.php">
                <input type="text" name="perform">&nbsp;&nbsp;Enter a venue from the list below to see when the group is booked.&nbsp;&nbsp;<input type="submit" value="search"><br><br>                         
             </form> 
