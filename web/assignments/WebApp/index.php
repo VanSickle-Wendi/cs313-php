@@ -31,18 +31,22 @@ $db = get_db();
                <thead>
                   <tr>
                      <th class=tCenter class="col-sm-2">Song Number</th>
-                     <th class="col-sm-10">Title</th>
+                     <th class="col-sm-4">Title</th>
+                     <th class="col-sm-4">Original Artits</th>
+                     <th class="col-sm-2">Release Date</th>
                   </tr>
                </thead>
                <tbody>
                   <?php
                   //Get Songs
-                  $statement = $db->prepare("SELECT id, title, tempo, genre, background FROM song ORDER BY title");
+                  $statement = $db->prepare("SELECT id, title, orig_artist, release_date FROM song ORDER BY title");
                   $statement->execute();
                   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                      $id = $row['id'];
                      $title = $row['title'];
-                     echo "<tr><td class=tCenter>$id</td><td>$title</td></tr>";
+                     $artist = $row['orig_artist'];
+                     $release = $row['release_date'];
+                     echo "<tr><td class=tCenter>$id</td><td>$title</td><td>$artist</td><td>$release</td></tr>";
                   }
                   ?>
 
