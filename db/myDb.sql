@@ -79,7 +79,7 @@ INSERT INTO song(title, tempo, genre, background, lead_singer)
             ('Place in the Choir', 'fast', 'country', 'guitar', 4),
             ('Sentimental Old You', 'medium', 'country', 'guitar', 4),
             ('Silver Haired Daddy', 'slow', 'old country', 'guitar', 4),
-            ('Sweetest Gift', 'medium', 'country', 'guitar', 'A', 3),
+            ('Sweetest Gift', 'medium', 'country', 'guitar', 3),
             ('The Happy Wanderer', 'medium', 'old country', 'guitar', 4),
             ('Those Memories', 'medium', 'country', 'guitar', 3);
 
