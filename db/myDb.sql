@@ -17,10 +17,8 @@ CREATE TABLE song (
    tempo TEMPO_TYPE NOT NULL,
    genre GENRE_TYPE,
    background BACKGROUND_TYPE,
-   first_chord VARCHAR(20),
    orig_artist VARCHAR(50),
    release_date DATE,
-   song_key VARCHAR(5),
    lead_singer INT REFERENCES singer(id)
 );
 
@@ -67,23 +65,23 @@ INSERT INTO performance (date, time, venue_id, booked)
 
 SELECT * FROM song AS s JOIN singer AS si ON s.lead_singer = si.id ORDER BY title;
 
-INSERT INTO song(title, tempo, genre, background, first_chord, lead_singer)
-     VALUES ('American Dream', 'medium', 'country', 'guitar', 'D', 3),
-            ('Blue to the Bone', 'medium', 'country', 'guitar', 'D', 4),
-            ('Bye Bye Baby Blues', 'medium', 'country', 'guitar', 'D', 4),
-            ('Feelin'' Kinda Lonely', 'medium', 'country', 'guitar', 'A Capo 1st Fret', 2),
-            ('For Baby', 'slow', 'country', 'guitar', 'D', 4),
-            ('Heartbreak Hill', 'fast', 'country', 'guitar', 'D', 4),
-            ('I''ll Fly Away', 'medium', 'old country', 'guitar', 'D', 4),
-            ('Jambalaya', 'fast', 'old country', 'guitar', 'G', 4),
-            ('Just in Case', 'fast', 'country', 'guitar', 'D Capo 1st Fret', 4),
-            ('Little Green Valley', 'medium', 'old country', 'guitar', 'A', 1),
-            ('Place in the Choir', 'fast', 'country', 'guitar', 'A Capo 3rd Fret', 4),
-            ('Sentimental Old You', 'medium', 'country', 'guitar', 'A', 4),
-            ('Silver Haired Daddy', 'slow', 'old country', 'guitar', 'A', 4),
+INSERT INTO song(title, tempo, genre, background, lead_singer)
+     VALUES ('American Dream', 'medium', 'country', 'guitar', 3),
+            ('Blue to the Bone', 'medium', 'country', 'guitar', 4),
+            ('Bye Bye Baby Blues', 'medium', 'country', 'guitar', 4),
+            ('Feelin'' Kinda Lonely', 'medium', 'country', 'guitar', 2),
+            ('For Baby', 'slow', 'country', 'guitar', 4),
+            ('Heartbreak Hill', 'fast', 'country', 'guitar', 4),
+            ('I''ll Fly Away', 'medium', 'old country', 'guitar', 4),
+            ('Jambalaya', 'fast', 'old country', 'guitar', 4),
+            ('Just in Case', 'fast', 'country', 'guitar', 4),
+            ('Little Green Valley', 'medium', 'old country', 'guitar', 1),
+            ('Place in the Choir', 'fast', 'country', 'guitar', 4),
+            ('Sentimental Old You', 'medium', 'country', 'guitar', 4),
+            ('Silver Haired Daddy', 'slow', 'old country', 'guitar', 4),
             ('Sweetest Gift', 'medium', 'country', 'guitar', 'A', 3),
-            ('The Happy Wanderer', 'medium', 'old country', 'guitar', 'A', 4),
-            ('Those Memories', 'medium', 'country', 'guitar', 'A Capo 1st Fret', 3);
+            ('The Happy Wanderer', 'medium', 'old country', 'guitar', 4),
+            ('Those Memories', 'medium', 'country', 'guitar', 3);
 
 
 
