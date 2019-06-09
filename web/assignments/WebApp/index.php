@@ -30,7 +30,7 @@ $db = get_db();
          <div>
             <form method="post" action="index.php">
 
-               <label for="song_num">Song #&nbsp;&nbsp;</label>
+               <label for="song_num" size="3">Song #&nbsp;&nbsp;</label>
                <input type="text" name="song_num" required>&nbsp;&nbsp;
 
                <label for="orig_artist">Original Artist&nbsp;&nbsp;</label>
