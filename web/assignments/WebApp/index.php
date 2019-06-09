@@ -28,7 +28,7 @@ $db = get_db();
          </div>
 
          <div>
-            <form method="post" action="views/formphp.php">
+            <form method="post" action="views/updateForm.php">
 
                <label for="song_num">Song #&nbsp;&nbsp;</label>
                <input type="text" name="song_num"  size="3" required>&nbsp;&nbsp;
