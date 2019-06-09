@@ -20,6 +20,7 @@ $stmt->bindValue(':orig_artist', $orig_artist_title, PDO::PARAM_STR);
 $stmt->bindValue(':release_date', $release_date, PDO::PARAM_DATE);
 $stmt->bindValue(':id', $song_num, PDO::PARAM_INT);
 $stmt->execute();
+$stmt->closeCursor();
 
 
 header("Location: ../index.php");
