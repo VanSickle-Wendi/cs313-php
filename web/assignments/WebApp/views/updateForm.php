@@ -16,9 +16,9 @@ echo $release_date;
 
 $sql = 'UPDATE song SET orig_artist=:orig_artist, release_date=:release_date WHERE id=:id';
 $stmt = $db->prepare($sql);
-$stmt->bindValue(':orig_artist', $orig_artist, PDO::PARAM_STR);
-$stmt->bindValue(':release_date', $release_date, PDO::PARAM_DATE);
-$stmt->bindValue(':id', $song_num, PDO::PARAM_INT);
+$stmt->bindValue(':orig_artist', $orig_artist);
+$stmt->bindValue(':release_date', $release_date);
+$stmt->bindValue(':id', $song_num);
 $stmt->execute();
 $stmt->closeCursor();
 
