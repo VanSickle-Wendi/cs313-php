@@ -31,20 +31,7 @@ $db = get_db();
             $perform = $_POST["perform"];
             ?>
             <form method="post" action="currentBookings.php">
-               <input type="text" name="perform">&nbsp;&nbsp;Enter a venue from the list below to see when the group is booked.&nbsp;&nbsp;
-
-               <input type="radio" name="perform" <?php if (isset($perform) && $perform == "Meridian SC") echo "checked"; ?>value="Meridian SC"> All &nbsp; &nbsp;            
-               <input type="radio" name="perform" <?php if (isset($perform) && $perform == "Affinity") echo "checked"; ?>value="Affinity"> Beverly &nbsp; &nbsp;
-               <input type="radio" name="perform" <?php if (isset($perform) && $perform == "Mallard Pointe") echo "checked"; ?>value="Mallard Pointe"> Shannon &nbsp; &nbsp;            
-               <input type="radio" name="perform" <?php if (isset($perform) && $perform == "Creekside") echo "checked"; ?>value="Creekside"> Wendi &nbsp; &nbsp;
-               <input type="radio" name="perform" <?php if (isset($perform) && $perform == "Touchmark") echo "checked"; ?>value="Touchmark"> Beverly &nbsp; &nbsp;
-               <input type="radio" name="perform" <?php if (isset($perform) && $perform == "Prestige") echo "checked"; ?>value="Prestige"> Shannon &nbsp; &nbsp;            
-               <input type="radio" name="perform" <?php if (isset($perform) && $perform == "Nampa FM") echo "checked"; ?>value="Nampa FM"> Wendi &nbsp; &nbsp;
-
-
-
-
-               <input type="submit" value="search"><br><br>                         
+               <input type="text" name="perform">&nbsp;&nbsp;Enter a venue from the list below to see when the group is booked.&nbsp;&nbsp;<input type="submit" value="search"><br><br>                         
             </form> 
          </div>
 
@@ -58,9 +45,7 @@ $db = get_db();
                <tbody>
                   <?php
                   //Get performances
-                  $perform = $_POST['perform'];                  
-                  $stmt = $db->prepare('SELECT venue_name FROM venue WHERE id=:id ORDER BY venue_name');
-                  $stmt->bindValue(':id', $perform, PDO::PARAM_STR);                  
+                  $stmt = $db->prepare('SELECT venue_name FROM venue ORDER BY venue_name');
                   $stmt->execute();
                   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($rows as $r) {
