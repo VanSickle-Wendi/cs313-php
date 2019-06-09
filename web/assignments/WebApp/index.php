@@ -28,7 +28,7 @@ $db = get_db();
          </div>
 
          <div>
-            <form method="post" action="index.php">
+            <form method="post" action="formphp.php">
 
                <label for="song_num">Song #&nbsp;&nbsp;</label>
                <input type="text" name="song_num"  size="3" required>&nbsp;&nbsp;
@@ -36,8 +36,8 @@ $db = get_db();
                <label for="orig_artist">Original Artist&nbsp;&nbsp;</label>
                <input type="text" name="orig_artist" required>&nbsp;&nbsp;
 
-               <label for="date">Date&nbsp;&nbsp;</label>
-               <input type="date" name="date" required>&nbsp;&nbsp;
+               <label for="release_date">Date&nbsp;&nbsp;</label>
+               <input type="date" name="release_date" required>&nbsp;&nbsp;
 
                <input type="submit" value="Update"><br><br><br>
             </form>
