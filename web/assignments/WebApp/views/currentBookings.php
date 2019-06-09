@@ -26,6 +26,7 @@ $db = get_db();
                <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/nav.php'; ?>
             </nav>
             <h3 class="text-muted">Performances</h3>
+            <hr>            
                         <?php
             $perform = $_POST["perform"];
             ?>

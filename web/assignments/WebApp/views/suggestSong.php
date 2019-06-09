@@ -30,6 +30,7 @@ $artist = htmlspecialchars($_POST['artist']);
                <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/nav.php'; ?>
             </nav>
             <h3 class="text-muted">Suggest a Song</h3>
+            <hr>            
          </div>
 
          <div>
