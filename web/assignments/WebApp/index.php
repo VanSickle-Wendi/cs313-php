@@ -25,6 +25,7 @@ $db = get_db();
                <?php include $_SERVER['DOCUMENT_ROOT'] . '/assignments/WebApp/common/navIndex.php'; ?>
             </nav>
             <h3 class="text-muted">Mom and Double Image</h3>
+            <p>Welcome! We would love some help updating details for the songs we sing.</p>
          </div>
 
          <div>
