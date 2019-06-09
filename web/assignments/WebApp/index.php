@@ -36,8 +36,8 @@ $db = get_db();
                <label for="orig_artist">Original Artist&nbsp;&nbsp;</label>
                <input type="text" name="orig_artist" required>&nbsp;&nbsp;
 
-               <label for="date">Artist&nbsp;&nbsp;</label>
-               <input type="text" name="date" required>&nbsp;&nbsp;
+               <label for="date">Date&nbsp;&nbsp;</label>
+               <input type="date" name="date" required>&nbsp;&nbsp;
 
                <input type="submit" value="Update"><br><br><br>
             </form>
