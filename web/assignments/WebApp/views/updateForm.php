@@ -5,9 +5,10 @@ $db = get_db();
 session_start();
 
 
-$song_num = htmlspecialchars($_POST['song_num']);
+
 $orig_artist = htmlspecialchars($_POST['orig_artist']);
 $release_date = htmlspecialchars($_POST['release_date']);
+$song_num = htmlspecialchars($_POST['song_num']);
 echo $song_num;
 echo $orig_artist;
 echo $release_date;
@@ -21,7 +22,5 @@ $stmt->bindValue(':id', $song_num, PDO::PARAM_INT);
 $stmt->execute();
 
 
-
 header("Location: ../index.php");
-die();
 ?>
