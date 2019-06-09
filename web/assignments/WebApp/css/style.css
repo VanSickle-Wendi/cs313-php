@@ -6,6 +6,10 @@ body {
 /*  background-image: url("..img/music_notes.jpg");*/
 }
 
+hr {
+   color: #000;
+}
+
 a {
    color: #fff;
 }
