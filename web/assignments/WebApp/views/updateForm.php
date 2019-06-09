@@ -19,6 +19,11 @@ $stmt = $db->prepare($sql);
 $stmt->bindValue(':orig_artist', $orig_artist_title, PDO::PARAM_STR);
 $stmt->bindValue(':release_date', $release_date, PDO::PARAM_DATE);
 $stmt->bindValue(':id', $song_num, PDO::PARAM_INT);
+$result = $stmt->execute();
+$row = $pg_fetch_row($result);
+$row_id = $row['0'];
+$query = 'UPDATE song SET orig_artist = $orig_artist, release_date = $release_date WHERE id = $id';
+$stmt = $db->prepare($query);
 $stmt->execute();
 $stmt->closeCursor();
 
