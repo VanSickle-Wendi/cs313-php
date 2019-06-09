@@ -18,6 +18,8 @@ CREATE TABLE song (
    genre GENRE_TYPE,
    background BACKGROUND_TYPE,
    first_chord VARCHAR(20),
+   orig_artist VARCHAR(50),
+   release_date DATE,
    song_key VARCHAR(5),
    lead_singer INT REFERENCES singer(id)
 );
@@ -159,3 +161,4 @@ INSERT INTO singer(singer_name, part, fav_song, experience)
 SELECT *
     FROM song LEFT JOIN singer ON song.lead_singer = singer.id;
 
+UPDATE song SET orig_artist = 'The Everly Brothers', release_date = '4/01/1958' WHERE id = 33;
