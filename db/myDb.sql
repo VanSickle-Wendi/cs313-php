@@ -159,4 +159,4 @@ INSERT INTO singer(singer_name, part, fav_song, experience)
 SELECT *
     FROM song LEFT JOIN singer ON song.lead_singer = singer.id;
 
-UPDATE song SET orig_artist = 'The Everly Brothers', release_date = '4/01/1958' WHERE id = 33;
+UPDATE song SET orig_artist = 'The Everly Brothers', release_date = '4/01/1958' WHERE id = 17;
