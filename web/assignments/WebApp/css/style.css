@@ -2,7 +2,8 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-image: url("..img/music_notes.jpg");
+  background-color: red;
+/*  background-image: url("..img/music_notes.jpg");*/
 }
 
 a {
