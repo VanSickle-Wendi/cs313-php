@@ -15,11 +15,12 @@
 
          <p>Your Major:<br>
             <?php
-            $majors[] = "Computer Science";
-            $majors[] = "Web Design and Development";
-            $majors[] = "Computer information Technology";
-            $majors[] = "Computer Engineering";
-
+//            $majors[] = "Computer Science";
+//            $majors[] = "Web Design and Development";
+//            $majors[] = "Computer information Technology";
+//            $majors[] = "Computer Engineering";
+            $majors = array( "Computer Science", "Web Design and Development", "Computer information Technology", "Computer Engineering");
+            var_dump($majors);?><br><br><?php
             foreach ($majors as $m) {
                ?>
                <label><input type="radio" name="major" value="<?php echo $m; ?>" required><?php echo $m; ?></label><br>     
@@ -30,14 +31,16 @@
 
          <p>Continents you have visited<br>
             <?php
-            $continents['na'] = "North America";
-            $continents['sa'] = "South America";
-            $continents['eu'] = "Europe";
-            $continents['as'] = "Asia";
-            $continents['au'] = "Australia";
-            $continents['af'] = "Africa";
-            $continents['an'] = "Antarctica";
-
+//            $continents['na'] = "North America";
+//            $continents['sa'] = "South America";
+//            $continents['eu'] = "Europe";
+//            $continents['as'] = "Asia";
+//            $continents['au'] = "Australia";
+//            $continents['af'] = "Africa";
+//            $continents['an'] = "Antarctica";
+            
+            $continents = array('na' => "North America", 'sa' => "South America", 'eu' => "Europe", 'as' => "Asia", 'au' => "Australia", 'af' => "Africa", 'an' => "Antarctica");
+            var_dump($majors);?><br><br><?php
             foreach ($continents as $key => $value) {
                ?>
                <label><input type="checkbox" name="continents[]" value="<?php echo $key; ?>"><?php echo $value; ?></label><br>     

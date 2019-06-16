@@ -65,7 +65,7 @@ $db = get_db();
                      $title = $row['title'];
                      $artist = $row['orig_artist'];
                      $release = $row['release_date'];
-                     echo "<tr><td class=tCenter>", $id, "</td><td>", $title, "</td><td>", $artist, "</td><td>", $release, "</td></tr>";
+                     echo "<tr><td class=tCenter>", $id, "</td><td>", $title, "</td><td>", $artist, "</td><td>", $release, "</td></tr>";// I changed this to parameters for echo() instead of one long string. I like parameters much better.
                   }
                   ?>
 
